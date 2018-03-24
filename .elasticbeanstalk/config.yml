@@ -5,9 +5,6 @@ branch-defaults:
     environment: flask-env
 environment-defaults:
   flask-env:
-    branch: Victor
-    repository: my-blog
-  test-env:
     branch: null
     repository: null
 global:
