@@ -23,5 +23,17 @@ enable_cool_new_feature = os.environ.get('ENABLE_COOL_NEW_FEATURE') in ['true', 
 def index():
     return flask.render_template('index.html')
 
+@application.route('/about')
+def about():
+    return flask.render_template('about.html')
+
+@application.route('/post')
+def post():
+    return flask.render_template('post.html')
+
+@application.route('/contact')
+def contact():
+    return flask.render_template('contact.html')
+
 if __name__ == '__main__':
     application.run(host='0.0.0.0')
