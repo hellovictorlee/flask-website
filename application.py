@@ -1,9 +1,10 @@
 import flask
-from flask_mysqldb import MySQL
+import sqlalchemy
+import json
 import os
  
+
 application = flask.Flask(__name__)
-mysql = MySQL(application)
 
 # Only enable Flask debugging if an env var is set to true
 application.debug = os.environ.get('FLASK_DEBUG') in ['true', 'True']
@@ -27,9 +28,12 @@ def about():
 def post():
     return flask.render_template('post.html')
 
-@application.route('/contact')
+@application.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return flask.render_template('contact.html')
+    if flask.request.method == 'POST':
+        return flask.render_template('index.html')
+    else:
+        return flask.render_template('contact.html')
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0')
