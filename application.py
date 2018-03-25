@@ -29,5 +29,10 @@ def hi_vic():
                                   application_version=application_version,
                                   enable_cool_new_feature=enable_cool_new_feature)
  
+@application.route('/victor')
+def hi_lee():
+    message = "Hello, Victor!"
+    return "hello world"
+
 if __name__ == '__main__':
     application.run(host='0.0.0.0')
