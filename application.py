@@ -3,21 +3,21 @@ import sqlalchemy
 import json
 import os
 
-app = flask.Flask(__name__)
+application = flask.Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def index():
     return flask.render_template('index.html')
 
-@app.route('/about')
+@application.route('/about')
 def about():
     return flask.render_template('about.html')
 
-@app.route('/post')
+@application.route('/post')
 def post():
     return flask.render_template('post.html')
 
-@app.route('/contact', methods=['GET', 'POST'])
+@application.route('/contact', methods=['GET', 'POST'])
 def contact():
     if flask.request.method == 'POST':
         return flask.render_template('index.html')
@@ -25,4 +25,4 @@ def contact():
         return flask.render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    application.run(host='0.0.0.0')
