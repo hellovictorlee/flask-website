@@ -1,13 +1,9 @@
 import flask
-from flask_bootstrap import Bootstrap
+from flask_mysqldb import MySQL
 import os
  
-#def create_app():
-#    application= flask.Flask(__name__)
-#    Bootstrap(application)
-#    return application
 application = flask.Flask(__name__)
-#application = create_app()
+mysql = MySQL(application)
 
 # Only enable Flask debugging if an env var is set to true
 application.debug = os.environ.get('FLASK_DEBUG') in ['true', 'True']
