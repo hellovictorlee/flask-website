@@ -14,8 +14,15 @@ def about():
     return flask.render_template('about.html')
 
 @application.route('/post')
-def post():
-    return flask.render_template('post.html')
+@application.route('/post/<page>')
+def post(page=''):
+    try:
+        if any(page):
+            return flask.render_template('post/' + page + '.html')
+        else:
+            return flask.render_template('post.html')
+    except Exception:
+        return "error!!"
 
 @application.route('/contact', methods=['GET', 'POST'])
 def contact():
