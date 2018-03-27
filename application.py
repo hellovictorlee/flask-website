@@ -15,17 +15,17 @@ if application.config["DEBUG"]:
         return response
 
 # configure session to use filesystem (instead of signed cookies)
-app.config["SESSION_FILE_DIR"] = gettempdir()
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
+application.config["SESSION_FILE_DIR"] = gettempdir()
+application.config["SESSION_PERMANENT"] = False
+application.config["SESSION_TYPE"] = "filesystem"
+Session(application)
 
 # database
 db = SQLAlchemy(application)
 
-class User(db.Model):
-    username = db.Column(db.String(80), unique=True)
-    pw_hash = db.Column(db.String(80))
+#class User(db.Model):
+#    username = db.Column(db.String(80), unique=True)
+#    pw_hash = db.Column(db.String(80))
 
 
 @application.route('/')
