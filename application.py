@@ -1,7 +1,32 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_session import Session
+from tempfile import gettempdir
 
 application = Flask(__name__)
+
+# ensure responses aren't cached
+if application.config["DEBUG"]:
+    @app.after_request
+    def after_request(response):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        response.headers["Expires"] = 0
+        response.headers["Pragma"] = "no-cache"
+        return response
+
+# configure session to use filesystem (instead of signed cookies)
+app.config["SESSION_FILE_DIR"] = gettempdir()
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+# database
+db = SQLAlchemy(application)
+
+class User(db.Model):
+    username = db.Column(db.String(80), unique=True)
+    pw_hash = db.Column(db.String(80))
+
 
 @application.route('/')
 def index():
