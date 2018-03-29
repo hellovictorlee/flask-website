@@ -4,7 +4,6 @@ from tempfile import gettempdir
 from models.database import init_db
 from models.models import Contact
 from models.database import db_session
-import sqlite3
 
 application = Flask(__name__)
 
@@ -52,6 +51,9 @@ def post(page=''):
 @application.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
+        u = Contact(request.form.get('name'), request.form.get('email'), request.form.get('message'))
+        db_session.add(u)
+        db_session.commit()
         return render_template('index.html')
     else:
         return render_template('contact.html')
