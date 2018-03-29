@@ -1,5 +1,5 @@
 __pycache__
-models/*.db
+*.db
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
