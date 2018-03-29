@@ -12,7 +12,6 @@ Flask-DebugToolbar==0.10.1
 Flask-Login==0.2.11
 Flask-OpenID==1.2.5
 Flask-Session==0.3.1
-Flask-SQLAlchemy==2.1
 Flask-WTF==0.14.2
 itsdangerous==0.24
 Jinja2==2.10

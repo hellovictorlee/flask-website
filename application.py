@@ -8,13 +8,13 @@ import sqlite3
 
 application = Flask(__name__)
 
-@app.teardown_appcontext
+@application.teardown_appcontext
 def shutdown_session(exception=None):
 	db_session.remove()
 
 # ensure responses aren't cached
 if application.config["DEBUG"]:
-    @app.after_request
+    @application.after_request
     def after_request(response):
         response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
         response.headers["Expires"] = 0
