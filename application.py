@@ -4,8 +4,16 @@ from tempfile import gettempdir
 from models.database import init_db
 from models.models import Contact
 from models.database import db_session
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 application = Flask(__name__)
+# avoid ddos attack
+limiter = Limiter(
+    application,
+    key_func=get_remote_address,
+    default_limits=["200 per day", "50 per hour"]
+)
 
 @application.teardown_appcontext
 def shutdown_session(exception=None):
@@ -49,6 +57,7 @@ def post(page=''):
         return "error!!"
 
 @application.route('/contact', methods=['GET', 'POST'])
+@limiter.limit("25 per day")
 def contact():
     if request.method == 'POST':
         u = Contact(request.form.get('name'), request.form.get('email'), request.form.get('message'))
