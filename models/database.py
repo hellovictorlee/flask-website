@@ -15,3 +15,7 @@ def init_db():
     # you will have to import them first before calling init_db()
     import models.models
     Base.metadata.create_all(bind=engine)
+
+# if table doesn't exist, create
+if not engine.dialect.has_table(engine, "Blog"):
+    init_db()
