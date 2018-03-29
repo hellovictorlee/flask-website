@@ -1,9 +1,16 @@
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 from tempfile import gettempdir
+from models.database import init_db
+from models.models import Contact
+from models.database import db_session
+import sqlite3
 
 application = Flask(__name__)
+
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+	db_session.remove()
 
 # ensure responses aren't cached
 if application.config["DEBUG"]:
@@ -20,12 +27,7 @@ application.config["SESSION_PERMANENT"] = False
 application.config["SESSION_TYPE"] = "filesystem"
 Session(application)
 
-# database
-db = SQLAlchemy(application)
 
-#class User(db.Model):
-#    username = db.Column(db.String(80), unique=True)
-#    pw_hash = db.Column(db.String(80))
 
 
 @application.route('/')
