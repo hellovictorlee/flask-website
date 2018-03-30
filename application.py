@@ -6,6 +6,7 @@ from models.models import Contact
 from models.database import db_session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from helpers import send_mail
 
 application = Flask(__name__)
 # avoid ddos attack
@@ -60,9 +61,17 @@ def post(page=''):
 @limiter.limit("25 per day")
 def contact():
     if request.method == 'POST':
-        u = Contact(request.form.get('name'), request.form.get('email'), request.form.get('message'))
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        u = Contact(name, email, message)
         db_session.add(u)
         db_session.commit()
+
+        # send mail
+        content = '<span style=\'color:green\'><b>' + name + '</b></span>' + ' said <br>\"' + message + '\"<br>by email <span style=\'color:blue\'>' + email + '</b></span>'
+
+        send_mail('Message from blog', content)
         return render_template('index.html')
     else:
         return render_template('contact.html')
