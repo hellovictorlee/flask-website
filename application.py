@@ -2,13 +2,18 @@ from flask import Flask, render_template, request
 from flask_session import Session
 from tempfile import gettempdir
 from models.database import init_db
-from models.models import Contact
+from models.models import Contact, Data
 from models.database import db_session
+from sqlalchemy import  create_engine
+from sqlalchemy.sql import select
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from helpers import send_mail
+from flask_mail import Mail, Message
+import json
 
 application = Flask(__name__)
+
+
 # avoid ddos attack
 limiter = Limiter(
     application,
@@ -61,6 +66,7 @@ def post(page=''):
 @limiter.limit("25 per day")
 def contact():
     if request.method == 'POST':
+        # save into db
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
@@ -68,13 +74,35 @@ def contact():
         db_session.add(u)
         db_session.commit()
 
-        # send mail
-        content = '<span style=\'color:green\'><b>' + name + '</b></span>' + ' said <br>\"' + message + '\"<br>by email <span style=\'color:blue\'>' + email + '</b></span>'
+        # gmail service
+        # bad way, but in order to avoid showing password and account
+        # manually put data to Blog.db everytime when deploying
+        engine = create_engine('sqlite:///./models/Blog.db', convert_unicode=True)
+        conn = engine.connect()
+        s = select([Data])
+        result = conn.execute(s)
+        row = result.fetchone()
+        application.config.update(
+            DEBUG=True,
+            #EMAIL SETTINGS
+            MAIL_SERVER='smtp.gmail.com',
+            MAIL_PORT=465,
+            MAIL_USE_SSL=True,
+            MAIL_USERNAME = row['mail_username'],
+            MAIL_PASSWORD = row['mail_password']
+            )
+        mail=Mail(application)
 
-        send_mail('Message from blog', content)
+        msg = Message( 'Reminder from blog',
+                    sender='remindvictorlee@gmail.com',
+                    recipients= ['hellovictorlee@gmail.com'])
+        msg.body =  "NAME: " + name + "\nMESS: " + message + "\nMAIL: " + email
+        mail.send(msg)
+
         return render_template('index.html')
     else:
         return render_template('contact.html')
+
 
 if __name__ == '__main__':
     application.run()

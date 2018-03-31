@@ -16,6 +16,5 @@ def init_db():
     import models.models
     Base.metadata.create_all(bind=engine)
 
-# if table doesn't exist, create
-if not engine.dialect.has_table(engine, "Blog"):
+if not engine.dialect.has_table(engine, 'Data'):
     init_db()
