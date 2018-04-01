@@ -1,16 +1,14 @@
-# -*- coding: utf-8 -*-
-from project import application
 from flask import Flask, render_template, request
 from flask_session import Session
-from tempfile import gettempdir
-from project.models.database import init_db
-from project.models.models import Contact, Data
-from project.models.database import db_session
-from sqlalchemy import  create_engine
-from sqlalchemy.sql import select
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_mail import Mail, Message
+from sqlalchemy import  create_engine
+from sqlalchemy.sql import select
+from tempfile import gettempdir
+from project.models.database import init_db, db_session
+from project.models.models import Contact, Data
+from project import application
 
 
 # avoid ddos attack
