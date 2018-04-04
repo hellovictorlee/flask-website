@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- web page icon -->
+    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='startbootstrap-clean-blog-gh-pages/img/favicon.ico') }} />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css") }} >
+
+    <!-- Custom fonts for this template -->
+    <link  rel="stylesheet" type="text/css" href={{ url_for('static', filename='startbootstrap-clean-blog-gh-pages/vendor/font-awesome/css/font-awesome.min.css') }} >
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link  rel="stylesheet" href={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css") }} >
+
+    <!-- origin  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Resume</title>
+    <link rel="stylesheet" href={{ url_for('static', filename="resume/css/blue.css") }} >
+    <link rel="stylesheet" href={{ url_for('static', filename="resume/css/print.css") }} media="print">
+    <!-- origin  -->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href={{ url_for('index')}}>Victor Lee</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href={{ url_for('index')}}>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={{ url_for('about')}}>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={{ url_for('post')}}>Tutorial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={{ url_for('contact')}}>Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={{ url_for('resume')}}>Résumé</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('static/startbootstrap-clean-blog-gh-pages/img/love.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1></h1>
+              <span class="subheading"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <!-- <img class="portrait" src={{ url_for('static', filename="resume/images/profile.png")}} alt="Victor Lee" /> -->
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name">Victor Lee<br />
+              <span>Software Developer</span></h1>
+            <ul>
+              <li class="ad">Thousand Oaks, CA</li>
+              <li class="mail">contactvictorlee@gmail.com</li>
+              <li class="tel">+1 (917) 972-2125</li>
+              <li class="web"><a href="https://www.linkedin.com/in/shuaihsunlee">https://www.linkedin.com/in/shuaihsunlee</a></li>
+              <li class="web"><a href="https://github.com/ShuaiHsunLee">https://github.com/ShuaiHsunLee</a></li>
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+        </div>
+        <!-- Begin 1st Row -->
+        <div class="entry">
+          <h2>EDUCATION</h2>
+          <div class="content">
+            <h3>Feb. 2017 - Feb. 2019</h3>
+            <p>California Lutheran University, Thousand Oaks, CA
+              <em>Master of Science in Information Technology</em></p>
+          </div>
+          <div class="content">
+            <h3>Sep. 2012 - June 2014</h3>
+            <p>National Taiwan University, Taipei, Taiwan
+              <em>Master of Science in Photonics and Optoelectronics</em></p>
+          </div>
+          <div class="content">
+            <h3>Sep. 2008 - June 2012</h3>
+            <p>National Sun Yat-sen University, Kaohsiung, Taiwan
+              <em>Bachelor of Science in Photonics</em></p>
+          </div>
+        </div>
+        <!-- End 1st Row -->
+        
+        <!-- Begin 2nd Row -->
+        <div class="entry">
+          <h2>WORK</h2>
+          <div class="content">
+            <h3>Feb. 2018 — Present</h3>
+            <p>Software Engineer Intern
+              <em>TAP Series, Westlake Village, CA</em></p>
+            <ul class="info">
+              <li>Work on development and design of websites</li>
+              <li>Assist with testing of websites</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End 2nd Row -->
+
+        <!-- Begin 3rd Row -->
+        <div class="entry">
+          <h2>PROJECT</h2>
+          <div class="content">
+            <h3>Feb. 2018 — Feb. 2018</h3>
+            <p>2018 Global Game Jam</p>
+            <ul class="info">
+              <li>Created a 3D puzzle game utilizing Unity</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Apr. 2017 — Dec. 2017</h3>
+            <p>Ludum Dare 38, 40 JAM</p>
+            <ul class="info">
+              <li>Created a web-based game utilizing JavaScript and HTML5 Canvas</li>
+              <li><a href="https://firstglory.github.io/40/hi">Friendly Dungeon</a></li>
+              <li><a href="https://firstglory.github.io/home.html">Across the Ancient</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Oct. 2018 — Nov. 2018</h3>
+            <p>iterm2-website</p>
+            <ul class="info">
+              <li><a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities/imgcat">Added online images preview feature in iterm2 by shell script</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>July 2017</h3>
+            <p>Cipher & Decipher System</p>
+            <ul class="info">
+              <li>Utilized Flask, a microframework for Python, to build backend</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Apr. 2016 — May 2016</h3>
+            <p>Electric Skateboard Prototpye</p>
+            <ul class="info">
+              <li>Utilized Arduino with electric components to build a wireless control skateboard</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Sep. 2012 — June 2014</h3>
+            <p>Electricmagnetic Wave Simulation</p>
+            <ul class="info">
+              <li>Analyzed the efficiency of special shape of CPML eliminating electromagnetic wave by Matlab</li>
+              <li>Implemented FDTD to simulate Surface Plasmon Polaritons by Matlab</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End 3rd Row -->
+
+        <!-- Begin 4th Row -->
+        <div class="entry">
+          <h2>ACTIVITY</h2>
+          <div class="content">
+            <h3>Mar. 2018</h3>
+            <p><a href="https://sfhacks2018.hackerearth.com/sprints/sf-hacks-3/dashboard/ff94d6a/submission/">Major League Hacking, SF Hacks 2018</a></p>
+            <ul class="info">
+              <li>Game development by Python with Pygame</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Feb. 2018</h3>
+            <p>CLU IT Club</p>
+            <ul class="info">
+              <li>Led a presentation of an introduction to Python for 10 people</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Feb. 2018</h3>
+            <p>Major League Hacking Volunteer, Cal Poly Pomona</p>
+          </div>
+          <div class="content">
+            <h3>Dec. 2017</h3>
+            <p>Data Science SALON Conference Volunteer, Los Angeles</p>
+          </div>
+          <div class="content">
+            <h3>Feb. 2013</h3>
+            <p>Optics Photonics Taiwan, the International Conference (OPTIC) 2013</p>
+          </div>
+        </div>
+        <!-- End 4th Row -->
+
+        <!-- Begin 4th Row -->
+        <div class="entry">
+          <h2>SKILLS</h2>
+          <div class="content">
+            <h3>Certificates</h3>
+            <ul class="skills">
+              <li><a href="https://www.coursera.org/account/accomplishments/verify/D73TDVQ52DUR">Algorithmic Toolbox</a></li>
+              <li><a href="https://www.coursera.org/account/accomplishments/verify/KPBUS7F5V2LX">Data Structure</a></li>
+              <li><a href="https://www.coursera.org/account/accomplishments/verify/PQWR53D54GKQ">Machine Learning</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Programming Languages</h3>
+            <ul class="skills">
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>Shell script</li>
+              <li>JavaScript</li>
+              <li>C#</li>
+              <li>Matlab</li>
+              <li>SQL</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          <div class="content">
+            <h3>Library</h3>
+            <h3>Framework</h3>
+            <h3>Application</h3>
+            <ul class="skills">
+              <li>AWS</li>
+              <li>Microsoft Visual Studio</li>
+              <li>Git</li>
+              <li>Makefile</li>
+              <li>Django</li>
+              <li>Flask</li>
+              <li>Scikit-learn</li>
+              <li>Unity</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End 4th Row -->
+        <!-- Begin 5th Row -->
+
+		<!--
+        <div class="entry">
+        <h2>WORKS</h2>
+        	<ul class="works">
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        	</ul>
+        </div>
+		-->
+
+        <!-- Begin 5th Row -->
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <div class="wrapper-bottom"></div>
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/ShuaiHsun">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/shuaihsunlee">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/ShuaiHsunLee">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- origin  -->
+    <script src={{ url_for('static', filename="resume/js/jquery-1.4.2.min.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/jquery.tipsy.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/cufon.yui.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/scrollTo.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/jquery.colorbox.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/custom.js")}}></script>
+    <script type="text/javascript">
+		Cufon.replace('h1,h2');
+    </script>
+    <!-- origin  -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js")}}></script>
+    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
+
+    <!-- Custom scripts for this template -->
+    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js") }} ></script>
+</body>
+</html>

@@ -57,6 +57,10 @@ def post(page=''):
     except Exception:
         return "error!!"
 
+@application.route('/resume')
+def resume():
+    return render_template('resume.html')
+
 @application.route('/contact', methods=['GET', 'POST'])
 @limiter.limit("25 per day")
 def contact():
