@@ -46,14 +46,14 @@ def index():
 def about():
     return render_template('about.html')
 
-@application.route('/post')
-@application.route('/post/<page>')
-def post(page=''):
+@application.route('/tutorial')
+@application.route('/tutorial/<page>')
+def tutorial(page=''):
     try:
         if any(page):
-            return render_template('post/' + page + '.html')
+            return render_template('tutorial/' + page + '.html')
         else:
-            return render_template('post.html')
+            return render_template('tutorial.html')
     except Exception:
         return "error!!"
 
