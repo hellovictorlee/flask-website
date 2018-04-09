@@ -38,6 +38,7 @@ application.config["SESSION_TYPE"] = "filesystem"
 Session(application)
 
 
+
 @application.route('/')
 def index():
     return render_template('index.html')
