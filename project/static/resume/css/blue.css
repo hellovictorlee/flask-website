@@ -52,8 +52,7 @@ blockquote, q {
 
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	background-color: #e1e0db;
-	background-image: url(../images/bg.jpg);
+	background-color: #fff;
 	background-repeat: repeat;
 	font-size:13px;
 	line-height: 17px;
@@ -65,92 +64,22 @@ body {
 	background-color:#e9e9e9;
 }
 
-a, a:visited, a:active {
+a.resume, a.resume:visited, a.resume:active {
 	color:#7b90b5;
 	text-decoration: none;
+    height:
 }
 
-a:hover {
+a.resume:hover {
 	color:#7b90b5;
 	text-decoration: underline;
-}
-
-/* DOSSIER BACKGROUND */
-/* ----------------------------------------- */
-
-#wrapper {
-	width:969px;
-	margin:0 auto;
-	margin-top:60px;
-	margin-bottom:100px;
-}
-
-.wrapper-top {
-	width:969px;
-	height:19px;
-	margin:0 auto;
-	background-image:url(../images/btop.jpg);
-	background-repeat:no-repeat;
-}
-
-.wrapper-mid {
-	width:969px;
-	margin:0 auto;
-	background-image:url(../images/bmid.jpg);
-	background-repeat: repeat-y;
-	padding-bottom:40px;
-}
-
-.wrapper-bottom {
-	width:969px;
-	height:22px;
-	padding:0;
-	margin:0 auto;
-	background-image:url(../images/bbottom.jpg);
-	background-repeat:no-repeat;
-}
-
-/* PAPER BACKGROUND */
-/* ----------------------------------------- */
-
-#paper {
-	width:828px;
-	margin:0 auto;
-}
-
-.paper-top {
-	width:828px;
-	margin:0 auto;
-	background-image:url(../images/ptop.jpg);
-	background-repeat:no-repeat;
-	height:126px;
-}
-
-#paper-mid {
-	width:828px;
-	margin:0 auto;
-	background-image:url(../images/pmid.jpg);
-	background-repeat:repeat-y;
-	display:block;
-	padding:0;
-	overflow: hidden;
-	padding-bottom:75px;
-	padding-top:7px;
-}
-
-.paper-bottom {
-	width:828px;
-	height:18px;
-	margin:0 auto;
-	background-image:url(../images/pbottom.jpg);
-	background-repeat:no-repeat;
 }
 
 /* ENTRIES */
 /* ----------------------------------------- */
 
 .entry {
-	width:720px;
+	width:1120px;
 	display: block;
 	padding-top:55px;
 	clear: both;
@@ -163,6 +92,7 @@ h1  {
 	color:#1b4491;
 	margin-bottom:3px;
 	clear:both;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h1 span {
@@ -170,10 +100,11 @@ h1 span {
 	display:block;
 	color:#1b4491;
 	margin-top:-5px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h2 {
-	width:180px;
+	width:280px;
 	height: 23px;
 	text-align: right;
 	float:left;
@@ -183,12 +114,17 @@ h2 {
 	font-size:22px;
 	color:#1b4491;
 	margin-bottom:-12px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
 }
 
 p {
-	width:500px;
+	width:800px;
 	margin-left:40px;
-	float:right;	
+	float:right;
+	font-size: 20px;
+	text-align: left;
+    font-family: "Times New Roman", Times, serif;
 }
 
 p img {
@@ -207,52 +143,57 @@ div.content {
 }
 
 h3 {
-	width:180px;
+	width:280px;
 	text-align: right;
 	float:left;
 	padding:0;
 	clear:both;
-	font-size: 13px;
+	font-size: 20px;
 	color:#7b90b5;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h4 {
-	width:180px;
+	width:280px;
 	text-align: right;
 	float:left;
 	padding:0;
 	clear:both;
-	font-size: 11px;
+	font-size: 16px;
 	color:#7b90b5;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h5 {
-	width:180px;
+	width:280px;
 	text-align: right;
 	float:left;
 	padding:0;
 	clear:both;
 	font-size: 10px;
 	color:#7b90b5;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h6 {
-	width:180px;
+	width:280px;
 	text-align: right;
 	float:left;
 	padding:0;
 	clear:both;
 	font-size: 9px;
 	color:#7b90b5;
+    font-family: "Times New Roman", Times, serif;
 }
 
 em {
-	font-family: Georgia, "Times New Roman", serif;
 	font-style: italic;
 	color:#777777;
-	font-size:12px;
+	font-size:20px;
 	display: block;
 	padding-top:3px;
+	text-align: left;
+    font-family: "Times New Roman", Times, serif;
 }
 
 
@@ -261,7 +202,7 @@ ol {
 	width:500px;
 	margin-left:40px;
 	list-style: decimal;
-	
+
 }
 
 ol li {
@@ -274,7 +215,7 @@ dl {
 	float:right;
 	width:500px;
 	margin-left:40px;
-	
+
 }
 
 dt {
@@ -295,7 +236,7 @@ ul.unordered {
 	float:right;
 	width:500px;
 	margin-left:40px;
-	
+
 }
 
 ul.unordered li {
@@ -313,9 +254,13 @@ ul.unordered li {
 
 ul.info {
 	float:right;
-	width:500px;
+	width:800px;
 	margin-left:40px;
-	list-style-type: none; 
+	list-style-type: none;
+	font-size: 20px;
+	text-align: left;
+    font-family: "Times New Roman", Times, serif;
+	font-style: italic;
 }
 
 ul.info li {
@@ -323,12 +268,17 @@ ul.info li {
 	padding:0;
 	float:left;
 	display: block;
-	width:500px;
+	width:800px;
 	background-image:url(../images/bullet.gif);
 	background-repeat: no-repeat;
 	padding-left:10px;
 	background-position: 0 .5em;
 	margin-top:12px;
+	font-size: 20px;
+	text-align: left;
+    font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+    height:20.8px
 }
 
 ul.skills {
@@ -339,7 +289,7 @@ ul.skills {
 	margin-left:40px;
 	margin-top:-6px;
 	list-style-type: none;
-	
+
 }
 
 ul.skills li {
@@ -395,7 +345,7 @@ img.portrait {
 	padding-bottom:36px;
 	margin-left:50px;
 	float:left;
-	
+
 }
 
 
@@ -535,7 +485,7 @@ img.portrait {
 #message a {
 	color: #fff;
 }
-	
+
 /* ELEMENTS */
 /* ----------------------------------------- */
 
@@ -632,6 +582,7 @@ h1.warn {
 	margin-top:30px;
 	padding:50px;
 	text-align: center;
+    font-family: "Times New Roman", Times, serif;
 }
 
 #contactform {
@@ -703,7 +654,7 @@ textarea:focus {
 	display: block;
 	clear: both;
 	width:90px;
-	height: 33px; 
+	height: 33px;
 	border:none;
 	float:left;
 	margin-left: 80px;
@@ -729,4 +680,73 @@ label.error {
 	font-weight: normal;
 	margin-left:80px;
 	width:238px;
+}
+
+
+/* clean blog */
+footer {
+    padding: 50px 0 65px;
+    font-size: 20px;
+    color: #212529;
+    font-family: Lora,'Times New Roman',serif;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer .list-inline {
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+p.copyright {
+    line-height: 1.5;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.text-muted {
+    color: #6c757d!important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.col-lg-8 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }

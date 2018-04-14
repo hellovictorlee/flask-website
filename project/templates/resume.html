@@ -27,266 +27,179 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href={{ url_for('index')}}>Victor Lee</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href={{ url_for('index')}}>Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={{ url_for('about')}}>About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={{ url_for('tutorial')}}>Tutorial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={{ url_for('contact')}}>Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={{ url_for('resume')}}>Résumé</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href={{ url_for('index')}}>Victor Lee</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <i class="fa fa-bars"></i> </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link" href={{ url_for('index')}}>Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href={{ url_for('about')}}>About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href={{ url_for('tutorial')}}>Tutorial</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href={{ url_for('contact')}}>Contact</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href={{ url_for('resume')}}>Résumé</a> </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('static/startbootstrap-clean-blog-gh-pages/img/love.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1></h1>
-              <span class="subheading"></span>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <span class="subheading"></span>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </header>
 
-<!-- Begin Wrapper -->
-<div id="wrapper">
-  <div class="wrapper-top"></div>
-  <div class="wrapper-mid">
-    <!-- Begin Paper -->
-    <div id="paper">
-      <div class="paper-top"></div>
-      <div id="paper-mid">
-        <div class="entry">
-          <!-- Begin Image -->
-          <!-- <img class="portrait" src={{ url_for('static', filename="resume/images/profile.png")}} alt="Victor Lee" /> -->
-          <!-- End Image -->
-          <!-- Begin Personal Information -->
-          <div class="self">
-            <h1 class="name">Victor Lee<br />
-              <span>Software Developer</span></h1>
-            <ul>
-              <li class="ad">Thousand Oaks, CA</li>
-              <li class="mail">contactvictorlee@gmail.com</li>
-              <li class="tel">+1 (917) 972-2125</li>
-              <li class="web"><a href="https://www.linkedin.com/in/shuaihsunlee">https://www.linkedin.com/in/shuaihsunlee</a></li>
-              <li class="web"><a href="https://github.com/ShuaiHsunLee">https://github.com/ShuaiHsunLee</a></li>
-            </ul>
-          </div>
-          <!-- End Personal Information -->
-        </div>
+    <!-- CONTENT -->
+    <div align="center">
         <!-- Begin 1st Row -->
         <div class="entry">
-          <h2>EDUCATION</h2>
-          <div class="content">
-            <h3>Feb. 2017 - Feb. 2019</h3>
-            <p>California Lutheran University, Thousand Oaks, CA
-              <em>Master of Science in Information Technology</em></p>
-          </div>
-          <div class="content">
+            <h2>EDUCATION</h2>
+            <div class="content">
+                <h3>Feb. 2017 - Feb. 2019</h3>
+                <p>California Lutheran University, Thousand Oaks, CA
+                <em>Master of Science in Information Technology</em></p>
+            </div>
+        <div class="content">
             <h3>Sep. 2012 - June 2014</h3>
             <p>National Taiwan University, Taipei, Taiwan
-              <em>Master of Science in Photonics and Optoelectronics</em></p>
-          </div>
-          <div class="content">
+            <em>Master of Science in Photonics and Optoelectronics</em></p>
+        </div>
+        <div class="content">
             <h3>Sep. 2008 - June 2012</h3>
             <p>National Sun Yat-sen University, Kaohsiung, Taiwan
-              <em>Bachelor of Science in Photonics</em></p>
-          </div>
+            <em>Bachelor of Science in Photonics</em></p>
         </div>
-        <!-- End 1st Row -->
-        
-        <!-- Begin 2nd Row -->
-        <div class="entry">
-          <h2>WORK</h2>
-          <div class="content">
+    </div>
+    <!-- End 1st Row -->
+
+    <!-- Begin 2nd Row -->
+    <div class="entry">
+        <h2>WORK</h2>
+        <div class="content">
             <h3>Feb. 2018 — Present</h3>
             <p>Software Engineer Intern
-              <em>TAP Series, Westlake Village, CA</em></p>
+            <em>TAP Series, Westlake Village, CA</em></p>
             <ul class="info">
-              <li>Work on development and design of websites</li>
-              <li>Assist with testing of websites</li>
+                <li> Work on development and design of websites</li>
+                <li> Assist with testing of websites</li>
             </ul>
-          </div>
         </div>
-        <!-- End 2nd Row -->
+    </div>
+    <!-- End 2nd Row -->
 
-        <!-- Begin 3rd Row -->
-        <div class="entry">
-          <h2>PROJECT</h2>
-          <div class="content">
+    <!-- Begin 3rd Row -->
+    <div class="entry">
+        <h2>PROJECT</h2>
+        <div class="content">
             <h3>Feb. 2018 — Feb. 2018</h3>
             <p>2018 Global Game Jam</p>
             <ul class="info">
-              <li>Created a 3D puzzle game utilizing Unity</li>
+                <li> Created a 3D puzzle game utilizing Unity</li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Apr. 2017 — Dec. 2017</h3>
             <p>Ludum Dare 38, 40 JAM</p>
             <ul class="info">
-              <li>Created a web-based game utilizing JavaScript and HTML5 Canvas</li>
-              <li><a href="https://firstglory.github.io/40/hi">Friendly Dungeon</a></li>
-              <li><a href="https://firstglory.github.io/home.html">Across the Ancient</a></li>
+                <li> Created a web-based game utilizing JavaScript and HTML5 Canvas</li>
+                <li> <a class="resume" href="https://ldjam.com/events/ludum-dare/40/friendly-dungeon">Friendly Dungeon</a></li>
+                <li> <a class="resume" href="https://ldjam.com/events/ludum-dare/38/across-the-ancient">Across the Ancient</a></li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Oct. 2017 — Nov. 2017</h3>
             <p>iterm2-website</p>
             <ul class="info">
-              <li><a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities/imgcat">Added online images preview feature in iterm2 by shell script</a></li>
+                <li> <a class="resume" href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities/imgcat">Added online images preview feature in iterm2 by shell script</a></li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>June 2017 - July 2017</h3>
             <p>Cipher & Decipher System</p>
             <ul class="info">
-              <li>Utilized Flask, a microframework for Python, to build backend</li>
+                <li> Utilized Flask, a microframework for Python, to build backend</li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Apr. 2016 — May 2016</h3>
             <p>Electric Skateboard Prototpye</p>
             <ul class="info">
-              <li><a href={{ url_for('static', filename="resume/images/skate.jpg")}} rel="gallery" title="Lorem ipsum dolor sit amet.">Utilized Arduino with electric components to build a wireless control skateboard</a></li>
+                <li> <a class="resume" href={{ url_for('static', filename="resume/images/skate.jpg")}} rel="gallery" title="Lorem ipsum dolor sit amet.">Utilized Arduino with electric components to build a wireless control skateboard</a></li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Sep. 2012 — June 2014</h3>
             <p>Electricmagnetic Wave Simulation</p>
             <ul class="info">
-              <li>Analyzed the efficiency of special shape of CPML eliminating electromagnetic wave by Matlab</li>
-              <li>Implemented FDTD to simulate Surface Plasmon Polaritons by Matlab</li>
+                <li> Analyzed the efficiency of special shape of CPML eliminating electromagnetic wave by Matlab</li>
+                <li> Implemented FDTD to simulate Surface Plasmon Polaritons by Matlab</li>
             </ul>
-          </div>
         </div>
-        <!-- End 3rd Row -->
+    </div>
+    <!-- End 3rd Row -->
 
-        <!-- Begin 4th Row -->
-        <div class="entry">
-          <h2>ACTIVITY</h2>
-          <div class="content">
+    <!-- Begin 4th Row -->
+    <div class="entry">
+        <h2>ACTIVITY</h2>
+        <div class="content">
             <h3>Mar. 2018</h3>
-            <p><a href="https://sfhacks2018.hackerearth.com/sprints/sf-hacks-3/dashboard/ff94d6a/submission/">Major League Hacking, SF Hacks 2018</a></p>
+            <p><a class="resume" href="https://sfhacks2018.hackerearth.com/sprints/sf-hacks-3/dashboard/ff94d6a/submission/">Major League Hacking, SF Hacks 2018</a></p>
             <ul class="info">
-              <li>Game development by Python with Pygame</li>
+                <li> Game development by Python with Pygame</li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Feb. 2018</h3>
             <p>CLU IT Club</p>
             <ul class="info">
-              <li>Led a presentation of an introduction to Python for 10 people</li>
+                <li> Led a presentation of an introduction to Python for 10 people</li>
             </ul>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Feb. 2018</h3>
             <p>Major League Hacking Volunteer, Cal Poly Pomona</p>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Dec. 2017</h3>
             <p>Data Science SALON Conference Volunteer, Los Angeles</p>
-          </div>
-          <div class="content">
+        </div>
+        <div class="content">
             <h3>Feb. 2013</h3>
             <p>Optics Photonics Taiwan, the International Conference (OPTIC) 2013</p>
-          </div>
         </div>
-        <!-- End 4th Row -->
-
-        <!-- Begin 4th Row -->
-        <div class="entry">
-          <h2>SKILLS</h2>
-          <div class="content">
-            <h3>Certificates</h3>
-            <ul class="skills">
-              <li><a href="https://www.coursera.org/account/accomplishments/verify/D73TDVQ52DUR">Algorithmic Toolbox</a></li>
-              <li><a href="https://www.coursera.org/account/accomplishments/verify/KPBUS7F5V2LX">Data Structure</a></li>
-              <li><a href="https://www.coursera.org/account/accomplishments/verify/PQWR53D54GKQ">Machine Learning</a></li>
-            </ul>
-          </div>
-          <div class="content">
-            <h3>Programming Languages</h3>
-            <ul class="skills">
-              <li>Python</li>
-              <li>Java</li>
-              <li>C</li>
-              <li>C++</li>
-              <li>Shell script</li>
-              <li>JavaScript</li>
-              <li>C#</li>
-              <li>Matlab</li>
-              <li>SQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
-          <div class="content">
-            <h3>Library</h3>
-            <h3>Framework</h3>
-            <h3>Application</h3>
-            <ul class="skills">
-              <li>AWS</li>
-              <li>Microsoft Visual Studio</li>
-              <li>Git</li>
-              <li>Makefile</li>
-              <li>Django</li>
-              <li>Flask</li>
-              <li>Scikit-learn</li>
-              <li>Unity</li>
-            </ul>
-          </div>
-        </div>
-        <!-- End 4th Row -->
-        <!-- Begin 5th Row -->
-
-		<!--
-        <div class="entry">
-        <h2>WORKS</h2>
-        	<ul class="works">
-        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
-        	</ul>
-        </div>
-		-->
-
-        <!-- Begin 5th Row -->
-      </div>
-      <div class="clear"></div>
-      <div class="paper-bottom"></div>
     </div>
-    <!-- End Paper -->
-  </div>
-  <div class="wrapper-bottom"></div>
-</div>
-<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
-<!-- End Wrapper -->
+    <!-- End 4th Row -->
+
+    <!-- Begin 5th Row -->
+    <div class="entry">
+        <h2>Certificates</h2>
+        <div class="content">
+            <h3>Dec. 2016</h3>
+            <p><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/PQWR53D54GKQ">Machine Learning</a>
+            <em>Machine Learning by Stanford University on Coursera. Certificate earned at Saturday, December 17, 2016 5:19 AM GMT</em></p>
+        </div>
+        <div class="content">
+            <h3>July 2016</h3>
+            <p><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/KPBUS7F5V2LX">Data Structure</a>
+            <em>Data Structures by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Wednesday, July 13, 2016 8:53 AM GMT</em></p>
+        </div>
+        <div class="content">
+            <h3>June 2016</h3>
+            <p><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/D73TDVQ52DUR">Algorithmic Toolbox</a>
+            <em>Algorithmic Toolbox by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Sunday, June 26, 2016 6:22 AM GMT</em></p>
+        </div>
+    </div>
+    <!-- End 5th Row -->
+
+    <hr style="box-sizing: content-box; height: 0; overflow: visible;">
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -318,6 +231,7 @@
                 </a>
               </li>
             </ul>
+            <p class="copyright text-muted">Copyright &copy; Shuai-Hsun Lee All Rights Reserved</p>
           </div>
         </div>
       </div>
