@@ -1,71 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <!-- web page icon -->
-    <link rel="icon" type="image/x-icon" href={{ url_for('static', filename='startbootstrap-clean-blog-gh-pages/img/favicon.ico') }} />
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/css/bootstrap.min.css") }} >
-
-    <!-- Custom fonts for this template -->
-    <link  rel="stylesheet" type="text/css" href={{ url_for('static', filename='startbootstrap-clean-blog-gh-pages/vendor/font-awesome/css/font-awesome.min.css') }} >
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link  rel="stylesheet" href={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/css/clean-blog.min.css") }} >
-
-    <!-- origin  -->
+{% extends "layouts/layout.html" %}
+{% block title %}about{% endblock %}
+{% block head %}
+    <html xmlns="http://www.w3.org/1999/xhtml">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Resume</title>
     <link rel="stylesheet" href={{ url_for('static', filename="resume/css/blue.css") }} >
     <link rel="stylesheet" href={{ url_for('static', filename="resume/css/print.css") }} media="print">
-    <!-- origin  -->
-</head>
-
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href={{ url_for('index')}}>Victor Lee</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <i class="fa fa-bars"></i> </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"> <a class="nav-link" href={{ url_for('index')}}>Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href={{ url_for('about')}}>About</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href={{ url_for('tutorial')}}>Tutorial</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href={{ url_for('contact')}}>Contact</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href={{ url_for('resume')}}>Résumé</a> </li>
-                </ul>
-            </div>
+    <script src={{ url_for('static', filename="resume/js/jquery-1.4.2.min.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/jquery.tipsy.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/cufon.yui.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/scrollTo.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/jquery.colorbox.js")}}></script>
+    <script src={{ url_for('static', filename="resume/js/custom.js")}}></script>
+    <script type="text/javascript">
+		Cufon.replace('h1,h2');
+    </script>
+{% endblock %}
+{% block content %}
+<div align="center">
+    <!-- Begin 1st Row -->
+    <div class="entry">
+        <h2>EDUCATION</h2>
+        <div class="content">
+            <h3>Feb. 2017 — Feb. 2019</h3>
+            <p>California Lutheran University, Thousand Oaks, CA
+            <em>Master of Science in Information Technology</em></p>
         </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('static/startbootstrap-clean-blog-gh-pages/img/love.jpg')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <span class="subheading"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- CONTENT -->
-    <div align="center">
-        <!-- Begin 1st Row -->
-        <div class="entry">
-            <h2>EDUCATION</h2>
-            <div class="content">
-                <h3>Feb. 2017 — Feb. 2019</h3>
-                <p>California Lutheran University, Thousand Oaks, CA
-                <em>Master of Science in Information Technology</em></p>
-            </div>
         <div class="content">
             <h3>Sep. 2012 — June 2014</h3>
             <p>National Taiwan University, Taipei, Taiwan
@@ -205,62 +165,6 @@
     </div>
     <!-- End 5th Row -->
 
-    <hr style="box-sizing: content-box; height: 0; overflow: visible;">
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/ShuaiHsun">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/shuaihsunlee">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/ShuaiHsunLee">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; Shuai-Hsun Lee All Rights Reserved</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- origin  -->
-    <script src={{ url_for('static', filename="resume/js/jquery-1.4.2.min.js")}}></script>
-    <script src={{ url_for('static', filename="resume/js/jquery.tipsy.js")}}></script>
-    <script src={{ url_for('static', filename="resume/js/cufon.yui.js")}}></script>
-    <script src={{ url_for('static', filename="resume/js/scrollTo.js")}}></script>
-    <script src={{ url_for('static', filename="resume/js/jquery.colorbox.js")}}></script>
-    <script src={{ url_for('static', filename="resume/js/custom.js")}}></script>
-    <script type="text/javascript">
-		Cufon.replace('h1,h2');
-    </script>
-    <!-- origin  -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/jquery/jquery.min.js")}}></script>
-    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
-
-    <!-- Custom scripts for this template -->
-    <script src={{ url_for('static', filename="startbootstrap-clean-blog-gh-pages/js/clean-blog.min.js") }} ></script>
-</body>
-</html>
+    <hr style="box-sizing: content-box; height: 0; overflow: visible;"/>
+</div>
+{% endblock %}
