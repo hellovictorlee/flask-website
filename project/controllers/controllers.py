@@ -43,9 +43,9 @@ Session(application)
 def index():
     return render_template('index.html')
 
-@application.route('/about')
-def about():
-    return render_template('about.html')
+@application.route('/article')
+def article():
+    return render_template('article.html')
 
 @application.route('/tutorial')
 @application.route('/tutorial/<page>')
