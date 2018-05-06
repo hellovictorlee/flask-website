@@ -39,37 +39,51 @@ Session(application)
 
 
 
-@application.route('/')
+@application.route('/', methods=['GET', 'POST'])
 def index():
+    contact()
     return render_template('index.html')
 
-@application.route('/article')
-def article():
-    return render_template('article.html')
-
-@application.route('/tutorial')
-@application.route('/tutorial/<page>')
-def tutorial(page=''):
+@application.route('/article', methods=['GET', 'POST'])
+@application.route('/article/<page>', methods=['GET', 'POST'])
+def article(page=''):
     try:
+        contact()
         if any(page):
-            return render_template('tutorial/' + page + '.html')
+            return render_template('article/' + page + '.html')
         else:
-            return render_template('tutorial.html')
+            return render_template('article.html')
+    except Exception:
+        return "error!!"
+
+@application.route('/video', methods=['GET', 'POST'])
+@application.route('/video/<page>', methods=['GET', 'POST'])
+def video(page=''):
+    try:
+        contact()
+        if any(page):
+            return render_template('video/' + page + '.html')
+        else:
+            return render_template('video.html')
     except Exception:
         return "error!!"
 
 @application.route('/resume')
 def resume():
+    contact()
     return render_template('resume.html')
 
-@application.route('/contact', methods=['GET', 'POST'])
-@limiter.limit("25 per day")
 def contact():
     if request.method == 'POST':
         # save into db
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
+        # check if empty
+        # temporary: will add email format checking
+        if not (name and email and message):
+            return
+
         u = Contact(name, email, message)
         db_session.add(u)
         db_session.commit()
@@ -98,8 +112,3 @@ def contact():
                     recipients= ['hellovictorlee@gmail.com'])
         msg.body =  "NAME: " + name + "\nMESS: " + message + "\nMAIL: " + email
         mail.send(msg)
-
-        return render_template('index.html')
-    else:
-        return render_template('contact.html')
-
