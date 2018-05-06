@@ -3,17 +3,45 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-function validate() {
-    var $result = $("#result");
+function emailvalidate() {
+    var $emailresult = $("#emailresult");
     var email = $("#email").val();
-    $result.text("");
+    $emailresult.text("");
 
     if (validateEmail(email)) {
-        $result.text(email + " is valid :)");
-        $result.css("color", "green");
+        $emailresult.text(email + " is valid :)");
+        $emailresult.css("color", "green");
     } else {
-        $result.text(email + " is not valid :(");
-        $result.css("color", "red");
+        $emailresult.text(email + " is not valid :(");
+        $emailresult.css("color", "red");
     }
     return false;
+}
+
+function namevalidate() {
+    var $nameresult = $("#nameresult");
+    var name = $("#name").val();
+    $nameresult.text("");
+
+    if (name != "") {
+        $nameresult.text(name + " is valid :)");
+        $nameresult.css("color", "green");
+    } else {
+        $nameresult.text("Name can't be empty :(");
+        $nameresult.css("color", "red");
+    }
+}
+
+function messagevalidate() {
+    var $messageresult = $("#messageresult");
+    var message = $("#message").val();
+    $messageresult.text("");
+
+    if (message != "") {
+        $messageresult.text(message + " is valid :)");
+        $messageresult.css("color", "green");
+    } else {
+        $messageresult.text("Message can't be empty :(");
+        $messageresult.css("color", "red");
+    }
 }
