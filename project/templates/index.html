@@ -1,18 +1,19 @@
 {% extends "layouts/layout.html" %}
-{% block title %}Victor Lee{% endblock %}
+{% block title %}Playground{% endblock %}
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="mx-auto">
+
             <div class="post-preview">
                 <a href="https://shuaihsunlee.github.io/catchasesmouse/catchasesmouse.html">
                     <h2 class="post-title"> Cat chases Mouse </h2>
-                    <p class="post-subtitle">
-                        All you need to do is moving your mouse.<br>
-                        <br>
-                        Control:<br>C : Increase Arrow Number<br>X : Decrease Arrow Number
-                    </p>
                 </a>
+                <p class="post-subtitle">
+                    All you need to do is moving your mouse.<br>
+                    <br>
+                    Control:<br>C : Increase Arrow Number<br>X : Decrease Arrow Number
+                </p>
                 <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on April 12, 2018 </p>
             </div>
             <hr>
@@ -35,15 +36,15 @@
             <div class="post-preview">
                 <a href="https://firstglory.github.io/40/hi">
                     <h2 class="post-title"> Friendly Dungeon </h2>
-                    <p class="post-subtitle">
-                        You woke up and found yourself locked in a dungeon.<br>
-                        There are coins around you, but picking them up slows you down.<br>
-                        You can also trade coins for keys, which open doors.<br>
-                        Beware: the dungeon can turn wild.<br>
-                        <br>
-                        Control:<br>W, ↑ : moving up<br>S, ↓ : moving down<br>A, ← : moving left<br>D, → : moving right
-                    </p>
                 </a>
+                <p class="post-subtitle">
+                    You woke up and found yourself locked in a dungeon.<br>
+                    There are coins around you, but picking them up slows you down.<br>
+                    You can also trade coins for keys, which open doors.<br>
+                    Beware: the dungeon can turn wild.<br>
+                    <br>
+                    Control:<br>W, ↑ : moving up<br>S, ↓ : moving down<br>A, ← : moving left<br>D, → : moving right
+                </p>
                 <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, & <a> Dawn</a> on December 5, 2017 </p>
             </div>
             <hr>
@@ -51,14 +52,14 @@
             <div class="post-preview">
                 <a href="https://firstglory.github.io/home.html">
                     <h2 class="post-title"> Across the Ancient </h2>
-                    <p class="post-subtitle">
-                        You accidentally went to a small desert island.<br>
-                        You have to find a way to escape the island.<br>
-                        Finally, you will find the island is not just a desert island you thought before.<br>
-                        <br>
-                        Control:<br>↑ : moving up<br>↓ : moving down<br>← : moving left<br>→ : moving right<br>Q : changing to left tool<br>E: changing to right tool
-                    </p>
                 </a>
+                <p class="post-subtitle">
+                    You accidentally went to a small desert island.<br>
+                    You have to find a way to escape the island.<br>
+                    Finally, you will find the island is not just a desert island you thought before.<br>
+                    <br>
+                    Control:<br>↑ : moving up<br>↓ : moving down<br>← : moving left<br>→ : moving right<br>Q : changing to left tool<br>E: changing to right tool
+                </p>
                 <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a>Dawn</a>, & <a>Pei</a> on April 24, 2017 </p>
             </div>
             <hr>
@@ -71,4 +72,51 @@
     </div>
 </div>
 <hr>
+{% endblock %}
+
+{% block widget %}
+<!-- Categories Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Categories</h5>
+    <div class="card-body">
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="#">Game</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Side Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Contact Me</h5>
+    <div class="card-body">
+        <form name="sentMessage" id="contactForm" novalidate method="post">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                    <p id="nameresult"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                    <p id="emailresult"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Message</label>
+                    <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                    <p id="messageresult"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="sendValidate">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}

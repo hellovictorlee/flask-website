@@ -1,5 +1,5 @@
 {% extends "layouts/layout.html" %}
-{% block title %}resume{% endblock %}
+{% block title %}Résumé{% endblock %}
 {% block head %}
 <link rel="stylesheet" href={{ url_for('static', filename="css/resume.css") }} >
 {% endblock %}
@@ -169,4 +169,39 @@
     </div>
 </div>
 <hr>
+{% endblock %}
+
+{% block widget %}
+<!-- Side Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Contact Me</h5>
+    <div class="card-body">
+        <form name="sentMessage" id="contactForm" novalidate method="post">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                    <p id="nameresult"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                    <p id="emailresult"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <label>Message</label>
+                    <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                    <p id="messageresult"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="sendValidate">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}

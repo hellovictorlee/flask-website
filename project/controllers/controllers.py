@@ -56,6 +56,18 @@ def article(page=''):
     except Exception:
         return "error!!"
 
+@application.route('/tutorial', methods=['GET', 'POST'])
+@application.route('/tutorial/<page>', methods=['GET', 'POST'])
+def tutorial(page=''):
+    try:
+        contact()
+        if any(page):
+            return render_template('tutorial/' + page + '.html')
+        else:
+            return render_template('tutorial.html')
+    except Exception:
+        return "error!!"
+
 @application.route('/video', methods=['GET', 'POST'])
 @application.route('/video/<page>', methods=['GET', 'POST'])
 def video(page=''):

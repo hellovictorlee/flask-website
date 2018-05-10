@@ -44,10 +44,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href={{ url_for('index')}}>Home</a>
+                        <a class="nav-link" href={{ url_for('index')}}>Playground</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href={{ url_for('article')}}>Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{ url_for('tutorial')}}>Tutorial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href={{ url_for('video')}}>Video</a>
@@ -80,88 +83,10 @@
                     {% block content %}{% endblock %}
 
                 </div>
-                <!-- Sidebar Widgets Column -->
                 <div class="col-md-4">
-                    <!-- Search Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">Search</h5>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary" id="goButton">Go!</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Categories Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">Categories</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#">Web Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Algorithm</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">ML</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#">Python</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">CLI</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Game</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% block widget %}{% endblock %}
 
-                    <!-- Side Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">Contact Me</h5>
-                        <div class="card-body">
-                            <form name="sentMessage" id="contactForm" novalidate method="post">
-                                <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls">
-                                        <label>Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                        <p id="nameresult"></p>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls">
-                                        <label>Email Address</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                        <p id="emailresult"></p>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls">
-                                        <label>Message</label>
-                                        <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                        <p id="messageresult"></p>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" id="sendValidate">Send</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

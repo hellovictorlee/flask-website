@@ -1,32 +1,49 @@
 {% extends "layouts/layout.html" %}
-{% block title %}Video{% endblock %}
+{% block title %}Tutorial{% endblock %}
 {% block content %}
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto" style="text-align:center; margin: 100px;">
-                <h2>Calculate Fibonacci number</h2>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YeEgWSbnVGA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</article>
-<hr>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
 
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto" style="text-align:center; margin:100px;">
-                <h2>Implement two Stacks as one Queue</h2>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rQlDu3hY2Yc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="post-preview">
+                <a href="https://shuaihsunlee.github.io/Vim/lesson1.html?transition=convex#/transitions">
+                    <h2 class="post-title">Vim tutorial</h2>
+                </a>
+                <p class="post-subtitle">The first Lesson for vim.</p>
+                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on May 09, 2018 </p>
             </div>
+            <hr>
+
         </div>
     </div>
-</article>
-<hr>
+</div>
 {% endblock %}
 
 {% block widget %}
+<!-- Categories Widget -->
+<div class="card my-4">
+    <h5 class="card-header">Categories</h5>
+    <div class="card-body">
+        <ul class="list-unstyled mb-0">
+            <li>
+                <a href="#">Algorithm</a>
+            </li>
+            <li>
+                <a href="#">Command Line</a>
+            </li>
+            <li>
+                <a href="#">Machine Learning</a>
+            </li>
+            <li>
+                <a href="#">Python</a>
+            </li>
+            <li>
+                <a href="#">Vim</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <!-- Side Widget -->
 <div class="card my-4">
     <h5 class="card-header">Contact Me</h5>
