@@ -320,7 +320,7 @@ header.masthead .post-heading .meta a {
   font-size: 14px;
   position: relative;
   margin-bottom: 0;
-  padding-bottom: 0.5em;
+  padding: 0;
   border-bottom: 1px solid #dee2e6;
 }
 
