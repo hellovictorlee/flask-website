@@ -6,7 +6,7 @@ from flask_mail import Mail, Message
 from sqlalchemy import  create_engine
 from sqlalchemy.sql import select
 from tempfile import gettempdir
-from project.models.database import init_db, db_session
+from project.models.database import init_db, db_session, engine
 from project.models.models import Contact, Data
 from project import application
 
@@ -41,8 +41,11 @@ Session(application)
 
 @application.route('/', methods=['GET', 'POST'])
 def index():
-    contact()
-    return render_template('index.html')
+    try:
+        contact()
+        return render_template('index.html')
+    except Exception:
+        return "error!!"
 
 @application.route('/article', methods=['GET', 'POST'])
 @application.route('/article/<page>', methods=['GET', 'POST'])
@@ -68,22 +71,22 @@ def tutorial(page=''):
     except Exception:
         return "error!!"
 
+
 @application.route('/video', methods=['GET', 'POST'])
-@application.route('/video/<page>', methods=['GET', 'POST'])
-def video(page=''):
+def video():
     try:
         contact()
-        if any(page):
-            return render_template('video/' + page + '.html')
-        else:
-            return render_template('video.html')
+        return render_template('video.html')
     except Exception:
         return "error!!"
 
-@application.route('/resume')
+@application.route('/resume', methods=['GET', 'POST'])
 def resume():
-    contact()
-    return render_template('resume.html')
+    try:
+        contact()
+        return render_template('resume.html')
+    except Exception:
+        return "error!!"
 
 def contact():
     if request.method == 'POST':
@@ -103,11 +106,11 @@ def contact():
         # gmail service
         # bad way, but in order to avoid showing password and account
         # manually put data to Blog.db everytime when deploying
-        engine = create_engine('sqlite:///project/models/Blog.db', convert_unicode=True)
         conn = engine.connect()
         s = select([Data])
         result = conn.execute(s)
         row = result.fetchone()
+        conn.close()
         application.config.update(
             DEBUG=True,
             #EMAIL SETTINGS

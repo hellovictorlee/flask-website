@@ -8,10 +8,7 @@ function emailvalidate() {
     var email = $("#email").val();
     $emailresult.text("");
 
-    if (validateEmail(email)) {
-        $emailresult.text(email + " is valid :)");
-        $emailresult.css("color", "green");
-    } else {
+    if (!validateEmail(email)) {
         $emailresult.text(email + " is not valid :(");
         $emailresult.css("color", "red");
     }
@@ -23,10 +20,7 @@ function namevalidate() {
     var name = $("#name").val();
     $nameresult.text("");
 
-    if (name != "") {
-        $nameresult.text(name + " is valid :)");
-        $nameresult.css("color", "green");
-    } else {
+    if (name == "") {
         $nameresult.text("Name can't be empty :(");
         $nameresult.css("color", "red");
     }
@@ -37,10 +31,7 @@ function messagevalidate() {
     var message = $("#message").val();
     $messageresult.text("");
 
-    if (message != "") {
-        $messageresult.text(message + " is valid :)");
-        $messageresult.css("color", "green");
-    } else {
+    if (message == "") {
         $messageresult.text("Message can't be empty :(");
         $messageresult.css("color", "red");
     }
