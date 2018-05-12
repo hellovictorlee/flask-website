@@ -27,8 +27,8 @@ function Particle()
 {
 
     this.radius = Math.round((Math.random()*5)+5);
-    this.x = Math.floor((Math.random() * canvas.width/2) + this.radius); 
-    this.y =  Math.floor((Math.random() * canvas.height/2) + this.radius); 
+    this.x = Math.floor((Math.random() * canvas.width) + this.radius); 
+    this.y =  Math.floor((Math.random() * canvas.height) + this.radius); 
     this.color = couleurs[Math.round(Math.random()*couleurs.length)];
     this.speedx = Math.round((Math.random()*201)+0)/100;
     this.speedy = Math.round((Math.random()*201)+0)/100;
