@@ -1,0 +1,6 @@
+{% extends "layouts/layout.html" %}
+{% block title %}Streaming{% endblock %}
+{% block content %}
+<h1>Video Streaming Demonstration</h1>
+<img src="{{ url_for('video_feed') }}">
+{% endblock %}
