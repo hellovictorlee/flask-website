@@ -48,17 +48,17 @@ def index():
     except Exception:
         return "error!!"
 
-@application.route('/article', methods=['GET', 'POST'])
-@application.route('/article/<page>', methods=['GET', 'POST'])
-def article(page=''):
-    try:
-        contact()
-        if any(page):
-            return render_template('article/' + page + '.html')
-        else:
-            return render_template('article.html')
-    except Exception:
-        return "error!!"
+# @application.route('/article', methods=['GET', 'POST'])
+# @application.route('/article/<page>', methods=['GET', 'POST'])
+# def article(page=''):
+#     try:
+#         contact()
+#         if any(page):
+#             return render_template('article/' + page + '.html')
+#         else:
+#             return render_template('article.html')
+#     except Exception:
+#         return "error!!"
 
 @application.route('/tutorial', methods=['GET', 'POST'])
 @application.route('/tutorial/<page>', methods=['GET', 'POST'])
