@@ -1,12 +1,11 @@
 body {
-  font-size: 20px;
+  font-size: 15px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
 p {
   line-height: 1.5;
-  margin: 30px 0;
 }
 
 p a {
@@ -283,7 +282,7 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a > .post-title {
-  font-size: 30px;
+  font-size: 22px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -312,7 +311,7 @@ header.masthead .post-heading .meta a {
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
