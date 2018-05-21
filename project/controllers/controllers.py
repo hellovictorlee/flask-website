@@ -1,3 +1,5 @@
+from importlib import import_module
+import os
 from flask import Flask, render_template, request, Response, stream_with_context
 from flask_session import Session
 from flask_limiter import Limiter
@@ -9,8 +11,12 @@ from tempfile import gettempdir
 from project.models.database import init_db, db_session, engine
 from project.models.models import Contact, Data
 from project import application
-from project.controllers.camera import Camera
 
+# import camera driver
+if os.environ.get('CAMERA'):
+    Camera = import_module('camera_' + os.environ['CAMERA']).Camera
+else:
+    from project.controllers.camera import Camera
 
 # avoid ddos attack
 limiter = Limiter(
@@ -38,67 +44,6 @@ application.config["SESSION_PERMANENT"] = False
 application.config["SESSION_TYPE"] = "filesystem"
 Session(application)
 
-
-
-@application.route('/', methods=['GET', 'POST'])
-def index():
-    try:
-        contact()
-        return render_template('index.html')
-    except Exception:
-        return "error!!"
-
-# @application.route('/article', methods=['GET', 'POST'])
-# @application.route('/article/<page>', methods=['GET', 'POST'])
-# def article(page=''):
-#     try:
-#         contact()
-#         if any(page):
-#             return render_template('article/' + page + '.html')
-#         else:
-#             return render_template('article.html')
-#     except Exception:
-#         return "error!!"
-
-@application.route('/tutorial', methods=['GET', 'POST'])
-@application.route('/tutorial/<page>', methods=['GET', 'POST'])
-def tutorial(page=''):
-    try:
-        contact()
-        if any(page):
-            return render_template('tutorial/' + page + '.html')
-        else:
-            return render_template('tutorial.html')
-    except Exception:
-        return "error!!"
-
-
-@application.route('/video', methods=['GET', 'POST'])
-def video():
-    try:
-        contact()
-        return render_template('video.html')
-    except Exception:
-        return "error!!"
-
-@application.route('/resume', methods=['GET', 'POST'])
-def resume():
-    try:
-        contact()
-        return render_template('resume.html')
-    except Exception:
-        return "error!!"
-
-@application.route('/streaming')
-def streaming():
-    return Response(gen(Camera()),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
-def gen(camera):
-    while True:
-        frame = camera.get_frame()
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 def contact():
     if request.method == 'POST':
@@ -139,3 +84,61 @@ def contact():
                     recipients= ['hellovictorlee@gmail.com'])
         msg.body =  "NAME: " + name + "\nMESS: " + message + "\nMAIL: " + email
         mail.send(msg)
+
+
+@application.route('/', methods=['GET', 'POST'])
+def index():
+    try:
+        contact()
+        return render_template('index.html')
+    except Exception:
+        return "error!!"
+
+
+@application.route('/tutorial', methods=['GET', 'POST'])
+@application.route('/tutorial/<page>', methods=['GET', 'POST'])
+def tutorial(page=''):
+    try:
+        contact()
+        if any(page):
+            return render_template('tutorial/' + page + '.html')
+        else:
+            return render_template('tutorial.html')
+    except Exception:
+        return "error!!"
+
+
+@application.route('/video', methods=['GET', 'POST'])
+def video():
+    try:
+        contact()
+        return render_template('video.html')
+    except Exception:
+        return "error!!"
+
+
+@application.route('/resume', methods=['GET', 'POST'])
+def resume():
+    try:
+        contact()
+        return render_template('resume.html')
+    except Exception:
+        return "error!!"
+
+
+def gen(camera):
+    while True:
+        frame = camera.get_frame()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+
+@application.route('/streaming')
+def streaming():
+    return render_template('streaming.html')
+
+
+@application.route('/video_feed')
+def video_feed():
+    return Response(gen(Camera()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')

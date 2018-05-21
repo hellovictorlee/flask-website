@@ -1,6 +1,32 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Streaming{% endblock %}
+
+{% block head %}
+<style>
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <h1>Video Streaming Demonstration</h1>
 <img src="{{ url_for('video_feed') }}">
+{% endblock %}
+
+{% block widget%}
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <p>Chating box</p>
+        </div>
+        <div class="col-4">
+            <p>People status</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
