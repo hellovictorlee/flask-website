@@ -1,6 +1,4 @@
-from importlib import import_module
-import os
-from flask import Flask, render_template, request, Response, stream_with_context
+from flask import Flask, render_template, request, Response
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -11,12 +9,8 @@ from tempfile import gettempdir
 from project.models.database import init_db, db_session, engine
 from project.models.models import Contact, Data
 from project import application
+import project.controllers.stream_controller
 
-# import camera driver
-if os.environ.get('CAMERA'):
-    Camera = import_module('camera_' + os.environ['CAMERA']).Camera
-else:
-    from project.controllers.camera import Camera
 
 # avoid ddos attack
 limiter = Limiter(
@@ -124,21 +118,3 @@ def resume():
         return render_template('resume.html')
     except Exception:
         return "error!!"
-
-
-def gen(camera):
-    while True:
-        frame = camera.get_frame()
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
-
-@application.route('/streaming')
-def streaming():
-    return render_template('streaming.html')
-
-
-@application.route('/video_feed')
-def video_feed():
-    return Response(gen(Camera()),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')

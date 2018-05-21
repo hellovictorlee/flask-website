@@ -1,5 +1,5 @@
 import time
-from project.controllers.base_camera import BaseCamera
+from project.controllers.stream.base_camera import BaseCamera
 
 
 class Camera(BaseCamera):
