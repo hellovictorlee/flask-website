@@ -5,12 +5,18 @@ from flask_limiter.util import get_remote_address
 from flask_mail import Mail, Message
 from sqlalchemy import  create_engine
 from sqlalchemy.sql import select
-from tempfile import gettempdir
 from project.models.database import init_db, db_session, engine
 from project.models.models import Contact, Data
 from project import application
 import project.controllers.stream_controller
+from tempfile import gettempdir
 
+
+# configure session to use filesystem (instead of signed cookies)
+application.config["SESSION_FILE_DIR"] = gettempdir()
+application.config["SESSION_PERMANENT"] = False
+application.config["SESSION_TYPE"] = "filesystem"
+Session(application)
 
 # avoid ddos attack
 limiter = Limiter(
@@ -19,9 +25,11 @@ limiter = Limiter(
     default_limits=["200 per day", "50 per hour"]
 )
 
+
 @application.teardown_appcontext
 def shutdown_session(exception=None):
 	db_session.remove()
+
 
 # ensure responses aren't cached
 if application.config["DEBUG"]:
@@ -31,12 +39,6 @@ if application.config["DEBUG"]:
         response.headers["Expires"] = 0
         response.headers["Pragma"] = "no-cache"
         return response
-
-# configure session to use filesystem (instead of signed cookies)
-application.config["SESSION_FILE_DIR"] = gettempdir()
-application.config["SESSION_PERMANENT"] = False
-application.config["SESSION_TYPE"] = "filesystem"
-Session(application)
 
 
 def contact():
