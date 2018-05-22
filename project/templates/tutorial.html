@@ -1,8 +1,8 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Tutorial{% endblock %}
 {% block content %}
-<h1 style="text-align: center; margin-top: 30px;">Algorithm</h1>
-<div class="container">
+<h1 id="Algorithm" style="text-align: center; margin-top: 30px;">Algorithm</h1>
+<div id="Algorithm" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -29,11 +29,11 @@
         <div class="col-sm">
         </div>
     </div>
-</div>
 <hr>
+</div>
 
-<h1 style="text-align: center; margin-top: 30px;">Ranger</h1>
-<div class="container">
+<h1 id="Ranger" style="text-align: center; margin-top: 30px;">Ranger</h1>
+<div id="Ranger" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -51,11 +51,11 @@
         <div class="col-sm">
         </div>
     </div>
-</div>
 <hr>
+</div>
 
-<h1 style="text-align: center; margin-top: 30px;">Python</h1>
-<div class="container">
+<h1 id="Python" style="text-align: center; margin-top: 30px;">Python</h1>
+<div id="Python" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -73,11 +73,11 @@
         <div class="col-sm">
         </div>
     </div>
-</div>
 <hr>
+</div>
 
-<h1 style="text-align: center; margin-top: 30px;">tmux</h1>
-<div class="container">
+<h1 id="tmux" style="text-align: center; margin-top: 30px;">tmux</h1>
+<div id="tmux" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -95,11 +95,11 @@
         <div class="col-sm">
         </div>
     </div>
-</div>
 <hr>
+</div>
 
-<h1 style="text-align: center; margin-top: 30px;">Vim</h1>
-<div class="container">
+<h1 id="Vim" style="text-align: center; margin-top: 30px;">Vim</h1>
+<div id="Vim" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -132,7 +132,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div id="Vim" class="container">
     <div class="row">
         <div class="col-sm">
             <div class="post-preview">
@@ -150,8 +150,9 @@
         <div class="col-sm">
         </div>
     </div>
-</div>
 <hr>
+</div>
+
 {% endblock %}
 
 {% block widget %}
@@ -161,19 +162,22 @@
     <div class="card-body">
         <ul class="list-unstyled mb-0">
             <li>
-                <a href="#">Algorithm</a>
+                <a id="AlgorithmButton" href="#">Algorithm</a>
             </li>
             <li>
-                <a href="#">Ranger</a>
+                <a id="RangerButton" href="#">Ranger</a>
             </li>
             <li>
-                <a href="#">Python</a>
+                <a id="PythonButton" href="#">Python</a>
             </li>
             <li>
-                <a href="#">tmux</a>
+                <a id="tmuxButton" href="#">tmux</a>
             </li>
             <li>
-                <a href="#">Vim</a>
+                <a id="VimButton" href="#">Vim</a>
+            </li>
+            <li>
+                <a id="AllButton" href="#">All</a>
             </li>
         </ul>
     </div>
@@ -211,4 +215,64 @@
         </form>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("#AlgorithmButton").click(function() {
+            $("*.container").hide();
+            $("h1").hide();
+            $("#navigation.container").show();
+            $("#insider.container").show();
+            $("#footer.container").show();
+            $("#Algorithm.container").show();
+            $("h1#Algorithm").show();
+        });
+
+        $("#RangerButton").click(function() {
+            $("*.container").hide();
+            $("h1").hide();
+            $("#navigation.container").show();
+            $("#insider.container").show();
+            $("#footer.container").show();
+            $("#Ranger.container").show();
+            $("h1#Ranger").show();
+        });
+
+        $("#PythonButton").click(function() {
+            $("*.container").hide();
+            $("h1").hide();
+            $("#navigation.container").show();
+            $("#insider.container").show();
+            $("#footer.container").show();
+            $("#Python.container").show();
+            $("h1#Python").show();
+        });
+
+        $("#tmuxButton").click(function() {
+            $("*.container").hide();
+            $("h1").hide();
+            $("#navigation.container").show();
+            $("#insider.container").show();
+            $("#footer.container").show();
+            $("#tmux.container").show();
+            $("h1#tmux").show();
+        });
+
+        $("#VimButton").click(function() {
+            $("*.container").hide();
+            $("h1").hide();
+            $("#navigation.container").show();
+            $("#insider.container").show();
+            $("#footer.container").show();
+            $("#Vim.container").show();
+            $("h1#Vim").show();
+        });
+
+        $("#AllButton").click(function() {
+            $(".container").show();
+            $("h1").show();
+        });
+
+    });
+</script>
 {% endblock %}
