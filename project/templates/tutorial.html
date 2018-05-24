@@ -1,5 +1,18 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Tutorial{% endblock %}
+
+{% block head %}
+<style>
+li.category {
+	padding: 10px;
+}
+
+a.category {
+	color: green;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <h1 id="Algorithm" style="text-align: center; margin-top: 30px;">Algorithm</h1>
 <div id="Algorithm" class="container">
@@ -161,23 +174,23 @@
     <h5 class="card-header">Categories</h5>
     <div class="card-body">
         <ul class="list-unstyled mb-0">
-            <li>
-                <a id="AlgorithmButton" href="#">Algorithm</a>
+            <li class="category">
+                <a id="AlgorithmButton" class="category" href="#">&#8227; Algorithm</a>
             </li>
-            <li>
-                <a id="RangerButton" href="#">Ranger</a>
+            <li class="category">
+                <a id="RangerButton" class="category" href="#">&#8227; Ranger</a>
             </li>
-            <li>
-                <a id="PythonButton" href="#">Python</a>
+            <li class="category">
+                <a id="PythonButton" class="category" href="#">&#8227; Python</a>
             </li>
-            <li>
-                <a id="tmuxButton" href="#">tmux</a>
+            <li class="category">
+                <a id="tmuxButton" class="category" href="#">&#8227; tmux</a>
             </li>
-            <li>
-                <a id="VimButton" href="#">Vim</a>
+            <li class="category">
+                <a id="VimButton" class="category" href="#">&#8227; Vim</a>
             </li>
-            <li>
-                <a id="AllButton" href="#">All</a>
+            <li class="category">
+                <a id="AllButton" class="category" href="#">&#8227; All</a>
             </li>
         </ul>
     </div>
@@ -185,8 +198,8 @@
 
 <!-- Side Widget -->
 <div class="card my-4">
-    <h5 class="card-header">Contact Me</h5>
-    <div class="card-body">
+    <h5 class="card-header" style="font-size: 20px;">Contact Me</h5>
+    <div class="card-body" style="padding-top: 0; padding-bottom: 0;">
         <form name="sentMessage" id="contactForm" novalidate method="post">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -215,9 +228,15 @@
         </form>
     </div>
 </div>
+<!-- Side Widget -->
 
 <script>
     $(document).ready(function() {
+        // color reset
+        $("a.category").click(function() {
+            $("a.category").css('color', 'green');
+        });
+
         $("#AlgorithmButton").click(function() {
             $("*.container").hide();
             $("h1").hide();
@@ -226,6 +245,7 @@
             $("#footer.container").show();
             $("#Algorithm.container").show();
             $("h1#Algorithm").show();
+			$("#AlgorithmButton").css('color', 'red')
         });
 
         $("#RangerButton").click(function() {
@@ -236,6 +256,7 @@
             $("#footer.container").show();
             $("#Ranger.container").show();
             $("h1#Ranger").show();
+			$("#RangerButton").css('color', 'red')
         });
 
         $("#PythonButton").click(function() {
@@ -246,6 +267,7 @@
             $("#footer.container").show();
             $("#Python.container").show();
             $("h1#Python").show();
+			$("#PythonButton").css('color', 'red')
         });
 
         $("#tmuxButton").click(function() {
@@ -256,6 +278,7 @@
             $("#footer.container").show();
             $("#tmux.container").show();
             $("h1#tmux").show();
+			$("#tmuxButton").css('color', 'red')
         });
 
         $("#VimButton").click(function() {
@@ -266,11 +289,13 @@
             $("#footer.container").show();
             $("#Vim.container").show();
             $("h1#Vim").show();
+			$("#VimButton").css('color', 'red')
         });
 
         $("#AllButton").click(function() {
             $(".container").show();
             $("h1").show();
+			$("#AllButton").css('color', 'red')
         });
 
     });

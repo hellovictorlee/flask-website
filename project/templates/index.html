@@ -63,23 +63,21 @@
                 </p>
                 <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a>Dawn</a>, & <a>Pei</a> on April 24, 2017 </p>
             </div>
-            <hr>
 
             <!-- Pager -->
-            <div class="clearfix">
-                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-            </div>
+            <!-- <div class="clearfix"> -->
+            <!--     <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
+            <!-- </div> -->
         </div>
     </div>
 </div>
-<hr>
 {% endblock %}
 
 {% block widget %}
 <!-- Side Widget -->
 <div class="card my-4">
-    <h5 class="card-header">Contact Me</h5>
-    <div class="card-body">
+    <h5 class="card-header" style="font-size: 20px;">Contact Me</h5>
+    <div class="card-body" style="padding-top: 0; padding-bottom: 0;">
         <form name="sentMessage" id="contactForm" novalidate method="post">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -108,4 +106,5 @@
         </form>
     </div>
 </div>
+<!-- Side Widget -->
 {% endblock %}

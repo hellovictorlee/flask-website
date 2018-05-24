@@ -293,7 +293,7 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > .post-meta {
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
   margin-top: 0;
   color: #868e96;
@@ -325,7 +325,7 @@ header.masthead .post-heading .meta a {
 
 .floating-label-form-group input,
 .floating-label-form-group textarea {
-  font-size: 1.5em;
+  font-size: 15px;
   position: relative;
   z-index: 1;
   padding: 0;
@@ -395,7 +395,6 @@ footer .copyright {
 .btn {
   font-size: 14px;
   font-weight: 800;
-  padding: 15px 25px;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
