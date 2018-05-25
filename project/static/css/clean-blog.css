@@ -67,6 +67,12 @@ blockquote {
   text-shadow: none;
 }
 
+img {
+    max-width: 50%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
 img::selection {
   color: #fff;
   background: transparent;
