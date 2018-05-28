@@ -208,43 +208,9 @@
 </div>
 {% endblock %}
 
-{% block widget %}
+{% block widgetDown %}
 <!-- Linked Profile -->
 <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/shuaihsunlee" data-format="inline" data-related="false"></script>
 <!-- Linked Profile -->
-
-<!-- Side Widget -->
-<div class="card my-4">
-    <h5 class="card-header" style="font-size: 20px;">Contact Me</h5>
-    <div class="card-body" style="padding-top: 0; padding-bottom: 0;">
-        <form name="sentMessage" id="contactForm" novalidate method="post">
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                    <p id="nameresult"></p>
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                    <label>Email Address</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                    <p id="emailresult"></p>
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                    <label>Message</label>
-                    <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                    <p id="messageresult"></p>
-                </div>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary" id="sendValidate">Send</button>
-            </div>
-        </form>
-    </div>
-</div>
-<!-- Side Widget -->
 {% endblock %}
