@@ -6,7 +6,7 @@
         #mapcontainer {
             display: inline-block;
             margin: 0 auto; 
-            background: black; 
+            background: white; 
             position: relative; 
             border: 10px solid grey; 
             border-radius: 10px; 
@@ -22,7 +22,7 @@
     <div class="row">
         <div class="mx-auto">
             <div id="mapcontainer">
-                <img id="mapimg" style="position:absolute; z-index:1; max-width:100%;" src={{ url_for('static', filename="img/USAMap.jpg") }}/>
+                <img id="mapimg" style="position:absolute; z-index:1; max-width:100%;" src={{ url_for('static', filename="img/usamap.gif") }}/>
                 <canvas id="mapcanvas"></canvas>
             </div>
         </div>
