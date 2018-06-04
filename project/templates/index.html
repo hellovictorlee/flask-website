@@ -1,7 +1,35 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Playground{% endblock %}
 
+{% block head %}
+    <style>
+        #mapcontainer {
+            display: inline-block;
+            margin: 0 auto; 
+            background: black; 
+            position: relative; 
+            border: 10px solid grey; 
+            border-radius: 10px; 
+            line-height: 0;
+        }
+
+        #mapcanvas { position:relative; z-index:20; }
+    </style>
+{% endblock %}
+
 {% block content %}
+<div id="map" class="container" style="text-align: center;">
+    <div class="row">
+        <div class="mx-auto">
+            <div id="mapcontainer">
+                <img id="mapimg" style="position:absolute; z-index:1; max-width:100%;" src={{ url_for('static', filename="img/USAMap.jpg") }}/>
+                <canvas id="mapcanvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="mx-auto">
@@ -71,4 +99,6 @@
         </div>
     </div>
 </div>
+
+<script src={{ url_for('static', filename="js/usamap.js") }} ></script>
 {% endblock %}
