@@ -3,16 +3,16 @@ console.log("USA Map");
 var mapcanvas = document.getElementById('mapcanvas');
 var context = mapcanvas.getContext('2d');
 
-init();
-
 // cursor location
 var c_loc = [-1, -1];
 
+init();
+
 function init() {
     resize();
-    getPath();
+    draw();
     window.addEventListener('mousemove', getMousePos, false);
-    // setInterval(draw, 25);
+    setInterval(draw, 25);
 }
 
 function resize() {
@@ -33,8 +33,32 @@ function getMousePos(e) {
         c_loc = [-1, -1];
 }
 
-function getPath() {
-    $.getJSON('../static/data/data.json', function(data) {         
-        console.log(data);
-    });
+function draw() {
+    context.clearRect(0, 0, mapcanvas.width, mapcanvas.height);
+    context.fillStyle = 'blue';
+    var state = -1;
+
+    scale = mapcanvas.width / 800;
+    var current_section = -1;
+    var c_loc_string = Math.round(c_loc[0] / scale).toString() + " " + Math.round(c_loc[1] / scale).toString();
+    if (c_loc_string in dic)
+        current_section = dic[c_loc_string];
+
+    var x, y
+    for (var key in dic) {
+        x = Math.round(parseInt(key.split(" ")[0]) * scale);
+        y = Math.round(parseInt(key.split(" ")[1]) * scale);
+        // if (current_section == dic[key] && state != current_section) {
+        //     context.clearRect(x, y, 1, 1);
+        //     context.fillStyle = 'yellow';
+        //     state = current_section;
+        // }
+        // else if (state != -1) {
+        //     context.clearRect(x, y, 1, 1);
+        //     context.fillStyle = 'blue';
+        //     state = -1
+        // }
+
+        context.fillRect(x, y, 1, 1);
+    }
 }

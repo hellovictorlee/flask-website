@@ -1,5 +1,4 @@
 from PIL import Image
-import copy
 import json
 
 
@@ -24,11 +23,13 @@ del dic[(255, 255, 255)]
 
 
 mapper = {}
+
 for j in range(y):
     for i in range(x):
         for k in dic:
             if (data[j*x+i][0], data[j*x+i][1], data[j*x+i][2]) == k:
-                mapper[str([i, j])] = dic[k]
+                # customize key type
+                mapper[str(i) + ' ' + str(j)] = dic[k]
 
 
 data = json.dumps(mapper)
