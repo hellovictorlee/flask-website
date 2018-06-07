@@ -58,14 +58,16 @@ function daySelect(e) {
 
 function draw() {
     context.clearRect(0, 0, mapcanvas.width, mapcanvas.height);
-    context.fillStyle = 'blue';
     var state = -1;
 
     var current_section = getSection();
 
-    scale = mapcanvas.width / 800;
+    var color_array = ["#aed6f1","#a9cce3","#d2b4de","#d7bde2","#f5b7b1","#e6b0aa","#a3e4d7","#a3e4d7","#a3e4d7","#abebc6","#f9e79f","#fad7a0","#f5cba7","#edbb99","#f7f9f9","#e5e7e9","#d5dbdb","#ccd1d1","#aeb6bf","#abb2b9","#e6b0aa","#f5b7b1","#d7bde2","#d2b4de"];
+    console.log(color_array.length);
+    var scale = mapcanvas.width / 800;
     var x, y
     for (var key in dic) {
+        context.fillStyle = color_array[dic[key]];
         x = Math.round(parseInt(key.split(" ")[0]) * scale);
         y = Math.round(parseInt(key.split(" ")[1]) * scale);
         // if (current_section == dic[key] && state != current_section) {

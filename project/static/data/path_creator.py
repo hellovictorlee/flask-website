@@ -33,5 +33,5 @@ for j in range(y):
 
 
 data = json.dumps(mapper)
-with open('data.json', 'w') as output:
+with open('path.js', 'w') as output:
     output.write(data)
