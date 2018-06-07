@@ -41,7 +41,7 @@ function getMousePos(e) {
 }
 
 function daySelect(e) {
-    $("#mapcanvas").click(function() {
+    $("#mapcanvas").on('touchstart mousedown', function() {
         // hide all days
         for (i=1; i<24; i++) {
             var s = "#day" + i.toString();
