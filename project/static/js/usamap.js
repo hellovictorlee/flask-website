@@ -9,10 +9,17 @@ var c_loc = [-1, -1];
 init();
 
 function init() {
+    // hide all days
+    for (i=1; i<24; i++) {
+        var s = "#day" + i.toString();
+        $(s).hide();
+    }
+
     resize();
     draw();
     window.addEventListener('mousemove', getMousePos, false);
-    setInterval(draw, 25);
+    window.addEventListener('mousedown', daySelect, false);
+    // setInterval(draw, 25);
 }
 
 function resize() {
@@ -33,17 +40,30 @@ function getMousePos(e) {
         c_loc = [-1, -1];
 }
 
+function daySelect(e) {
+    $("#mapcanvas").click(function() {
+        // hide all days
+        for (i=1; i<24; i++) {
+            var s = "#day" + i.toString();
+            $(s).hide();
+        }
+
+        // show day of current section
+        if (getSection() != -1) {
+            var s = "#day" + getSection().toString();
+            $(s).show();
+        }
+    });
+}
+
 function draw() {
     context.clearRect(0, 0, mapcanvas.width, mapcanvas.height);
     context.fillStyle = 'blue';
     var state = -1;
 
-    scale = mapcanvas.width / 800;
-    var current_section = -1;
-    var c_loc_string = Math.round(c_loc[0] / scale).toString() + " " + Math.round(c_loc[1] / scale).toString();
-    if (c_loc_string in dic)
-        current_section = dic[c_loc_string];
+    var current_section = getSection();
 
+    scale = mapcanvas.width / 800;
     var x, y
     for (var key in dic) {
         x = Math.round(parseInt(key.split(" ")[0]) * scale);
@@ -61,4 +81,13 @@ function draw() {
 
         context.fillRect(x, y, 1, 1);
     }
+}
+
+function getSection() {
+    scale = mapcanvas.width / 800;
+    var current_section = -1;
+    var c_loc_string = Math.round(c_loc[0] / scale).toString() + " " + Math.round(c_loc[1] / scale).toString();
+    if (c_loc_string in dic)
+        current_section = dic[c_loc_string];
+    return current_section;
 }
