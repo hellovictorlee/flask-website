@@ -2,7 +2,7 @@ from PIL import Image
 import json
 
 
-img = Image.open("../img/path_usamap.png")
+img = Image.open("../img/path_point_usamap.png")
 data = img.getdata()
 x = data.size[0]
 y = data.size[1]
@@ -33,5 +33,5 @@ for j in range(y):
 
 
 data = json.dumps(mapper)
-with open('path.js', 'w') as output:
+with open('path_point.js', 'w') as output:
     output.write(data)
