@@ -9,6 +9,9 @@ var c_loc = [-1, -1];
 // draw status
 var day = 0;
 
+// point color definition
+var color_array = ["#aed6f1","#a9cce3","#d2b4de","#d7bde2","#f5b7b1","#e6b0aa","#a3e4d7","#a3e4d7","#a3e4d7","#abebc6","#f9e79f","#fad7a0","#f5cba7","#edbb99","#f7f9f9","#e5e7e9","#d5dbdb","#ccd1d1","#aeb6bf","#abb2b9","#e6b0aa","#f5b7b1","#d7bde2","#d2b4de"];
+
 // path point radius
 var radius = 5;
 
@@ -44,6 +47,29 @@ function getMousePos(e) {
         c_loc = [w, h];
     else
         c_loc = [-1, -1];
+
+    // draw selecting point if exist
+    mapcontext.clearRect(0, 0, mapcanvas.width, mapcanvas.height);
+    var current_section = getSection();
+    var scale = mapcanvas.width / 800;
+    var x, y, d;
+
+    for (var key in dic) {
+        if (dic[key] <= day) {
+            x = Math.round(parseInt(key.split(" ")[0]) * scale);
+            y = Math.round(parseInt(key.split(" ")[1]) * scale);
+
+            d = distance(c_loc[0], c_loc[1], x, y);
+            mapcontext.fillStyle = color_array[dic[key]];
+            circle(x, y, radius);
+
+            if (d <= radius) {
+                
+                mapcontext.fillStyle = 'white';
+                circle(x, y, radius * 1.5);
+            }
+        }
+    }
 }
 
 function daySelect(e) {
@@ -71,7 +97,6 @@ function draw() {
     mapcontext.clearRect(0, 0, mapcanvas.width, mapcanvas.height);
 
     var current_section = getSection();
-    var color_array = ["#aed6f1","#a9cce3","#d2b4de","#d7bde2","#f5b7b1","#e6b0aa","#a3e4d7","#a3e4d7","#a3e4d7","#abebc6","#f9e79f","#fad7a0","#f5cba7","#edbb99","#f7f9f9","#e5e7e9","#d5dbdb","#ccd1d1","#aeb6bf","#abb2b9","#e6b0aa","#f5b7b1","#d7bde2","#d2b4de"];
     var scale = mapcanvas.width / 800;
     var x, y;
 
