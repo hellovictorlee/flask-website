@@ -10,7 +10,7 @@ var c_loc = [-1, -1];
 var day = 0;
 
 // point color definition
-var color_array = ["#aed6f1","#a9cce3","#d2b4de","#d7bde2","#f5b7b1","#e6b0aa","#a3e4d7","#a3e4d7","#a3e4d7","#abebc6","#f9e79f","#fad7a0","#f5cba7","#edbb99","#f7f9f9","#e5e7e9","#d5dbdb","#ccd1d1","#aeb6bf","#abb2b9","#e6b0aa","#f5b7b1","#d7bde2","#d2b4de"];
+var color_array = ["#c0392b","#1abc9c","#e67e22","#34495e","#2980b9","#f1c40f","#95a5a6","#9b59b6","#27ae60","#ecf0f1","#7b241c","#21618c","#9c640c","#515a5a","#5b2c6f","#1d8348","#797d7f"];
 
 // path point radius
 var radius = 5;
@@ -19,7 +19,7 @@ init();
 
 function init() {
     // hide all days
-    for (i=1; i<24; i++) {
+    for (i=1; i<18; i++) {
         var s = "#day" + i.toString();
         $(s).hide();
     }
@@ -64,7 +64,6 @@ function getMousePos(e) {
             circle(x, y, radius);
 
             if (d <= radius) {
-                
                 mapcontext.fillStyle = 'white';
                 circle(x, y, radius * 1.5);
             }
@@ -86,7 +85,7 @@ function dayChange(e) {
         day -= 1;
     else
         return;
-    day = day >= 0 ? day % 24 : 0;
+    day = day >= 0 ? day % 18 : 0;
     draw();
 
     hide_all_days();
@@ -112,7 +111,7 @@ function draw() {
 }
 
 function hide_all_days() {
-    for (i=1; i<24; i++) {
+    for (i=1; i<18; i++) {
         var s = "#day" + i.toString();
         $(s).hide();
     }
