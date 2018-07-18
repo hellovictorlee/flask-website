@@ -54,6 +54,8 @@ function getMousePos(e) {
     var scale = mapcanvas.width / 800;
     var x, y, d;
 
+    var lst = [];
+    var tmp_d = radius;
     for (var key in dic) {
         if (dic[key] <= day) {
             x = Math.round(parseInt(key.split(" ")[0]) * scale);
@@ -63,11 +65,16 @@ function getMousePos(e) {
             mapcontext.fillStyle = color_array[dic[key]];
             circle(x, y, radius);
 
-            if (d <= radius) {
-                mapcontext.fillStyle = 'white';
-                circle(x, y, radius * 1.5);
+            if (d <= radius && d < tmp_d) {
+                tmp_d = d;
+                lst[0] = x;
+                lst[1] = y;
             }
         }
+    }
+    if (lst.length > 0) {
+        mapcontext.fillStyle = 'white';
+        circle(lst[0], lst[1], radius * 1.5);
     }
 }
 
