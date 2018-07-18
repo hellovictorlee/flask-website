@@ -62,7 +62,7 @@ function getMousePos(e) {
             y = Math.round(parseInt(key.split(" ")[1]) * scale);
 
             d = distance(c_loc[0], c_loc[1], x, y);
-            mapcontext.fillStyle = color_array[dic[key]];
+            mapcontext.fillStyle = color_array[dic[key] - 1];
             circle(x, y, radius);
 
             if (d <= radius && d < tmp_d) {
@@ -108,7 +108,7 @@ function draw() {
 
     for (var key in dic) {
         if (dic[key] <= day) {
-            mapcontext.fillStyle = color_array[dic[key]];
+            mapcontext.fillStyle = color_array[dic[key] - 1]; // color array started from 0
             x = Math.round(parseInt(key.split(" ")[0]) * scale);
             y = Math.round(parseInt(key.split(" ")[1]) * scale);
 
