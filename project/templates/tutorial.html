@@ -45,28 +45,6 @@ a.category {
 <hr>
 </div>
 
-<h1 id="Ranger" style="text-align: center; margin-top: 30px;">Ranger</h1>
-<div id="Ranger" class="container">
-    <div class="row">
-        <div class="col-sm">
-            <div class="post-preview">
-                <a href="https://shuaihsunlee.github.io/Ranger/lesson1.html?transition=convex#/transitions">
-                    <h2 class="post-title">Ranger - Lesson 1</h2>
-                </a>
-                <p class="post-subtitle">Ranger, a file system management, is what you don't want to miss.</p>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on May 22, 2018 </p>
-            </div>
-        </div>
-
-        <div class="col-sm">
-        </div>
-
-        <div class="col-sm">
-        </div>
-    </div>
-<hr>
-</div>
-
 <h1 id="Python" style="text-align: center; margin-top: 30px;">Python</h1>
 <div id="Python" class="container">
     <div class="row">
@@ -77,28 +55,6 @@ a.category {
                 </a>
                 <p class="post-subtitle">Python is one of my favorite programming language because of it's design. Let me introduce to Python.</p>
                 <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on May 23, 2018 </p>
-            </div>
-        </div>
-
-        <div class="col-sm">
-        </div>
-
-        <div class="col-sm">
-        </div>
-    </div>
-<hr>
-</div>
-
-<h1 id="tmux" style="text-align: center; margin-top: 30px;">tmux</h1>
-<div id="tmux" class="container">
-    <div class="row">
-        <div class="col-sm">
-            <div class="post-preview">
-                <a href="https://shuaihsunlee.github.io/tmux/lesson1.html?transition=convex#/transitions">
-                    <h2 class="post-title">tmux - Lesson 1</h2>
-                </a>
-                <p class="post-subtitle">tmux is a terminal multiplexer which makes my life better.</p>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on May 21, 2018 </p>
             </div>
         </div>
 
@@ -178,13 +134,7 @@ a.category {
                 <a id="AlgorithmButton" class="category" href="#">&#8227; Algorithm</a>
             </li>
             <li class="category">
-                <a id="RangerButton" class="category" href="#">&#8227; Ranger</a>
-            </li>
-            <li class="category">
                 <a id="PythonButton" class="category" href="#">&#8227; Python</a>
-            </li>
-            <li class="category">
-                <a id="tmuxButton" class="category" href="#">&#8227; tmux</a>
             </li>
             <li class="category">
                 <a id="VimButton" class="category" href="#">&#8227; Vim</a>
@@ -215,17 +165,6 @@ a.category {
 			$("#AlgorithmButton").css('color', 'red')
         });
 
-        $("#RangerButton").click(function() {
-            $("*.container").hide();
-            $("h1").hide();
-            $("#navigation.container").show();
-            $("#insider.container").show();
-            $("#footer.container").show();
-            $("#Ranger.container").show();
-            $("h1#Ranger").show();
-			$("#RangerButton").css('color', 'red')
-        });
-
         $("#PythonButton").click(function() {
             $("*.container").hide();
             $("h1").hide();
@@ -235,17 +174,6 @@ a.category {
             $("#Python.container").show();
             $("h1#Python").show();
 			$("#PythonButton").css('color', 'red')
-        });
-
-        $("#tmuxButton").click(function() {
-            $("*.container").hide();
-            $("h1").hide();
-            $("#navigation.container").show();
-            $("#insider.container").show();
-            $("#footer.container").show();
-            $("#tmux.container").show();
-            $("h1#tmux").show();
-			$("#tmuxButton").css('color', 'red')
         });
 
         $("#VimButton").click(function() {
