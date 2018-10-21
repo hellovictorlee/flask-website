@@ -91,6 +91,15 @@ def index():
         return "error!!"
 
 
+@application.route('/blog', methods=['GET', 'POST'])
+def blog():
+    try:
+        contact()
+        return render_template('blog.html')
+    except Exception:
+        return "error!!"
+
+
 @application.route('/tutorial', methods=['GET', 'POST'])
 @application.route('/tutorial/<page>', methods=['GET', 'POST'])
 def tutorial(page=''):
