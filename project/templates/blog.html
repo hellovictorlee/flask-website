@@ -1,9 +1,35 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Blog{% endblock %}
-{% block head %}{% endblock %}
+
+{% block head %}
+<style>
+	#linking {
+		color: green;
+	}
+	.center_img img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 40;
+	}
+</style>
+{% endblock %}
 
 {% block content %}
 <div>
-	<p>IDEAS</p>
+	<h1>SoCal AI & Data Science Conference 2018</h1>
+
+	<img class="center" src={{ url_for('static', filename="img/Conference_Pic/IMG_6049.jpg") }} >
+
+	<p>In this Saturday I went to <a href="https://www.ideassn.org/socal-2018/">SoCal AI & Data Science Conference 2018</a>. The price of the ticket is between $75 to $249. Owing to knowing someone so I got a free ticket. The conference is located at Los Angeles Convention Center next to Staples Center.</p>
+
+	<img class="center" src={{ url_for('static', filename="img/Conference_Pic/IMG_6047.jpg") }} >
+	<img class="center" src={{ url_for('static', filename="img/Conference_Pic/IMG_6048.jpg") }} >
+
+	<p>There are many interesting topics about AI, Machine Learning, Blockchain, and so on. All the talks can be found on the YouTube.</p>
+	<p>The greatest thing for me it that I met an amazing guy in the conference. His name is Debajyoti Ray, Founder &amp; CEO, RivetAI. I have been his speak on CoinTalks<a href="https://cointalks.tv"></a>.</p>
+	<img class="center" src={{ url_for('static', filename="img/Conference_Pic/IMG_6056.jpg") }} >
+	<p>In the speak, he focus on what the perfect coding language for blockchain is. In the talk, he go through couples of ways to analyze what kind of programming language characteristics fits into Blockchain development. The talks is amazing, not only because he let me know what programming language should I use to develop Blockchain but also give a insight. That is, every time when we develop an application we must understand our tools-programming language. What is it good at and what is it bad at on the project.</p>
+	<p>Yesterday, I was just like his big fan. The true thing is that he effect me on merely a talk so I really appreciate him. Joining to community is one of the best choices in my life.</p>
 </div>
 {% endblock %}
