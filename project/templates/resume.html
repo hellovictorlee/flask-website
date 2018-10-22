@@ -1,236 +1,300 @@
 {% extends "layouts/layout.html" %}
 {% block title %}Résumé{% endblock %}
 {% block head %}
-<link rel="stylesheet" href={{ url_for('static', filename="css/resume.css") }} >
+<link rel="stylesheet" href={{ url_for('static', filename="css/resume.css") }}>
 {% endblock %}
+
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="mx-auto">
+	<div class="row">
+		<div class="mx-auto">
+			<!-- Begin 1st Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">EDUCATION</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Feb. 2017 — May 2019</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">California Lutheran University, Thousand Oaks, CA
+						<em class="resume">Master of Science in Information Technology</em>
+					</p>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Sep. 2012 — June 2014</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">National Taiwan University, Taipei, Taiwan
+						<em class="resume">Master of Science in Photonics and Optoelectronics</em>
+					</p>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Sep. 2008 — June 2012</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">National Sun Yat-sen University, Kaohsiung, Taiwan
+						<em class="resume">Bachelor of Science in Photonics</em>
+					</p>
+				</div>
+			</div>
+			<hr>
+			<!-- End 1st Row -->
 
-            <!-- Begin 1st Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">EDUCATION</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Feb. 2017 — May 2019</h3> </div>
-                <div class="col-8">
-                    <p class="resume">California Lutheran University, Thousand Oaks, CA
-                    <em class="resume">Master of Science in Information Technology</em></p>
-                </div>
-                <div class="col-4"> <h3 class="resume">Sep. 2012 — June 2014</h3> </div>
-                <div class="col-8">
-                    <p class="resume">National Taiwan University, Taipei, Taiwan
-                    <em class="resume">Master of Science in Photonics and Optoelectronics</em></p>
-                </div>
-                <div class="col-4"> <h3 class="resume">Sep. 2008 — June 2012</h3> </div>
-                <div class="col-8">
-                    <p class="resume">National Sun Yat-sen University, Kaohsiung, Taiwan
-                    <em class="resume">Bachelor of Science in Photonics</em></p>
-                </div>
-            </div>
-            <hr>
-            <!-- End 1st Row -->
+			<!-- Begin 2nd Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">WORK</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Feb. 2018 — Present</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Software Engineer Intern
+						<em class="resume">TAP Series, Westlake Village, CA</em>
+					</p>
+					<ul class="info">
+						<li class="resume">Built a functionality of user login verification</li>
+						<li class="resume">Built a functionality of password reset</li>
+						<li class="resume">Utilized Javascript, CSS, HTML, Bootstrap, and Razor to build web page</li>
+						<li class="resume">Utilized ASP.NET, SQL Server, and the techniques of cookie, session, and BCrypt to create the functionality</li>
+						<li class="resume">Utilized https protocol to request mail server to send verification code through SMTP protocol</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<!-- End 2nd Row -->
 
-            <!-- Begin 2nd Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">WORK</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Feb. 2018 — Present</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Software Engineer Intern
-                    <em class="resume">TAP Series, Westlake Village, CA</em></p>
-                    <ul class="info">
-                        <li class="resume">Built a functionality of user login verification</li>
-                        <li class="resume">Built a functionality of password reset</li>
-                        <li class="resume">Utilized Javascript, CSS, HTML, Bootstrap, and Razor to build web page</li>
-                        <li class="resume">Utilized ASP.NET, SQL Server, and the techniques of cookie, session, and BCrypt to create the functionality</li>
-                        <li class="resume">Utilized https protocol to request mail server to send verification code through SMTP protocol</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <!-- End 2nd Row -->
+			<!-- Begin 3rd Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">PROJECT</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Apr. 2018 — Present</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Flask Website</p>
+					<ul class="info">
+						<li class="resume">Utilized Flask, virtual environment, Python, SQLite to build backend</li>
+						<li class="resume">Utilized JavaScript, Bootstrap, Ajax, and jQuery to build the web page</li>
+						<li class="resume">Utilized SMTP protocol to automatically send email</li>
+						<li class="resume">Deployed web service on EC2 utilizing Elastic Beanstalk</li>
+						<li class="resume">Customized MVC for Flask application</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Feb. 2018 — Feb. 2018</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">2018 Global Game Jam</p>
+					<ul class="info">
+						<li class="resume">Created a 3D puzzle game utilizing Unity</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Apr. 2017 — Dec. 2017</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Ludum Dare 38, 40 JAM</p>
+					<ul class="info">
+						<li class="resume">Created a web-based game utilizing JavaScript and HTML5 Canvas</li>
+						<li class="resume">Utilized GIMP to create images</li>
+						<li class="resume">Utilized Python to transfer map layout to json file</li>
+						<li class="resume"><a class="resume" href="https://ldjam.com/events/ludum-dare/40/friendly-dungeon">Friendly Dungeon</a></li>
+						<li class="resume"><a class="resume" href="https://ldjam.com/events/ludum-dare/38/across-the-ancient">Across the Ancient</a></li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Oct. 2017 — Nov. 2017</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">iterm2-website</p>
+					<ul class="info">
+						<li class="resume"><a class="resume" href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities/imgcat">Added online images preview feature in iterm2 by shell script</a></li>
+						<li class="resume">Utilized curl to download image and encode to Base64</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">June 2017 — July 2017</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Cipher & Decipher System</p>
+					<ul class="info">
+						<li class="resume">Utilized Flask, a microframework for Python, to build backend</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">May 2017 — May 2017</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Sublime Text Plugin</p>
+					<ul class="info">
+						<li class="resume"><a class="resume" href="https://github.com/ShuaiHsunLee/sublime-cursor-movement">Made a plugin for Sublime Text to quickly select and move cursor</a></li>
+						<li class="resume">The package is written by Python</li>
+						<li class="resume">Default multiple lines is 5 lines</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Apr. 2016 — May 2016</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Electric Skateboard Prototpye</p>
+					<ul class="info">
+						<li class="resume"><a class="resume" href={{ url_for('static', filename="img/electricskateboard.jpg")}} rel="gallery" title="Lorem ipsum dolor sit amet.">Utilized Arduino with electric components to build a wireless control skateboard</a></li>
+						<li class="resume">Utilized MOSFET to control high-voltage LED light</li>
+						<li class="resume">Utilized HC-05 Bluetooth Module to control Arduino</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Sep. 2012 — June 2014</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Electricmagnetic Wave Simulation</p>
+					<ul class="info">
+						<li class="resume">Analyzed the efficiency of special shape of CPML eliminating electromagnetic wave by Matlab</li>
+						<li class="resume">Implemented FDTD to simulate Surface Plasmon Polaritons by Matlab</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<!-- End 3rd Row -->
 
-            <!-- Begin 3rd Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">PROJECT</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Apr. 2018 — Present</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Flask Website</p>
-                    <ul class="info">
-                        <li class="resume">Utilized Flask, virtual environment, Python, SQLite to build backend</li>
-                        <li class="resume">Utilized JavaScript, Bootstrap, Ajax, and jQuery to build the web page</li>
-                        <li class="resume">Utilized SMTP protocol to automatically send email</li>
-                        <li class="resume">Deployed web service on EC2 utilizing Elastic Beanstalk</li>
-                        <li class="resume">Customized MVC for Flask application</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Feb. 2018 — Feb. 2018</h3> </div>
-                <div class="col-8">
-                    <p class="resume">2018 Global Game Jam</p>
-                    <ul class="info">
-                        <li class="resume">Created a 3D puzzle game utilizing Unity</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Apr. 2017 — Dec. 2017</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Ludum Dare 38, 40 JAM</p>
-                    <ul class="info">
-                        <li class="resume">Created a web-based game utilizing JavaScript and HTML5 Canvas</li>
-                        <li class="resume">Utilized GIMP to create images</li>
-                        <li class="resume">Utilized Python to transfer map layout to json file</li>
-                        <li class="resume"><a class="resume" href="https://ldjam.com/events/ludum-dare/40/friendly-dungeon">Friendly Dungeon</a></li>
-                        <li class="resume"><a class="resume" href="https://ldjam.com/events/ludum-dare/38/across-the-ancient">Across the Ancient</a></li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Oct. 2017 — Nov. 2017</h3> </div>
-                <div class="col-8">
-                    <p class="resume">iterm2-website</p>
-                    <ul class="info">
-                        <li class="resume"><a class="resume" href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities/imgcat">Added online images preview feature in iterm2 by shell script</a></li>
-                        <li class="resume">Utilized curl to download image and encode to Base64</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">June 2017 — July 2017</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Cipher & Decipher System</p>
-                    <ul class="info">
-                        <li class="resume">Utilized Flask, a microframework for Python, to build backend</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">May 2017 — May 2017</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Sublime Text Plugin</p>
-                    <ul class="info">
-                        <li class="resume"><a class="resume" href="https://github.com/ShuaiHsunLee/sublime-cursor-movement">Made a plugin for Sublime Text to quickly select and move cursor</a></li>
-                        <li class="resume">The package is written by Python</li>
-                        <li class="resume">Default multiple lines is 5 lines</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Apr. 2016 — May 2016</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Electric Skateboard Prototpye</p>
-                    <ul class="info">
-                        <li class="resume"><a class="resume" href={{ url_for('static', filename="img/electricskateboard.jpg")}} rel="gallery" title="Lorem ipsum dolor sit amet.">Utilized Arduino with electric components to build a wireless control skateboard</a></li>
-                        <li class="resume">Utilized MOSFET to control high-voltage LED light</li>
-                        <li class="resume">Utilized HC-05 Bluetooth Module to control Arduino</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Sep. 2012 — June 2014</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Electricmagnetic Wave Simulation</p>
-                    <ul class="info">
-                        <li class="resume">Analyzed the efficiency of special shape of CPML eliminating electromagnetic wave by Matlab</li>
-                        <li class="resume">Implemented FDTD to simulate Surface Plasmon Polaritons by Matlab</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <!-- End 3rd Row -->
+			<!-- Begin 4th Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">ACTIVITY</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Sep. 2018</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Data Science SALON Conference Volunteer, Los Angeles</p>
+					<ul class="info">
+						<li class="resume">Front Desk Staff</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Mar. 2018</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="https://sfhacks2018.hackerearth.com/sprints/sf-hacks-3/dashboard/ff94d6a/submission/">Major League Hacking, SF Hacks 2018</a></p>
+					<ul class="info">
+						<li class="resume">Game development by Python with Pygame</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Feb. 2018</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">CLU IT Club</p>
+					<ul class="info">
+						<li class="resume">Led a presentation of an introduction to Python for 10 people</li>
+						<li class="resume">Presented the concept of what Python interpreter is and what package is</li>
+						<li class="resume">Presented how to set up the developing environment</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Feb. 2018</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Major League Hacking Volunteer, Cal Poly Pomona</p>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Dec. 2017</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Data Science SALON Conference Volunteer, Los Angeles</p>
+					<ul class="info">
+						<li class="resume">Technical Support for speakers</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">Feb. 2013</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume">Optics Photonics Taiwan, the International Conference (OPTIC) 2013</p>
+					<ul class="info">
+						<li class="resume">Presented the research of CPML with specific structure eliminating TM wave</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<!-- End 4th Row -->
 
-            <!-- Begin 4th Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">ACTIVITY</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Sep. 2018</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Data Science SALON Conference Volunteer, Los Angeles</p>
-                    <ul class="info">
-                        <li class="resume">Front Desk Staff</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Mar. 2018</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="https://sfhacks2018.hackerearth.com/sprints/sf-hacks-3/dashboard/ff94d6a/submission/">Major League Hacking, SF Hacks 2018</a></p>
-                    <ul class="info">
-                        <li class="resume">Game development by Python with Pygame</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Feb. 2018</h3> </div>
-                <div class="col-8">
-                    <p class="resume">CLU IT Club</p>
-                    <ul class="info">
-                        <li class="resume">Led a presentation of an introduction to Python for 10 people</li>
-                        <li class="resume">Presented the concept of what Python interpreter is and what package is</li>
-                        <li class="resume">Presented how to set up the developing environment</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Feb. 2018</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Major League Hacking Volunteer, Cal Poly Pomona</p>
-                </div>
-                <div class="col-4"> <h3 class="resume">Dec. 2017</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Data Science SALON Conference Volunteer, Los Angeles</p>
-                    <ul class="info">
-                        <li class="resume">Technical Support for speakers</li>
-                    </ul>
-                </div>
-                <div class="col-4"> <h3 class="resume">Feb. 2013</h3> </div>
-                <div class="col-8">
-                    <p class="resume">Optics Photonics Taiwan, the International Conference (OPTIC) 2013</p>
-                    <ul class="info">
-                        <li class="resume">Presented the research of CPML with specific structure eliminating TM wave</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <!-- End 4th Row -->
+			<!-- Begin 5th Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">CERTIFICATES</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Dec. 2016</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/PQWR53D54GKQ">Machine Learning</a>
+						<em class="resume">Machine Learning by Stanford University on Coursera. Certificate earned at Saturday, December 17, 2016 5:19 AM GMT</em>
+					</p>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">July 2016</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/KPBUS7F5V2LX">Data Structure</a>
+						<em class="resume">Data Structures by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Wednesday, July 13, 2016 8:53 AM GMT</em>
+					</p>
+				</div>
+				<div class="col-4">
+					<h3 class="resume">June 2016</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/D73TDVQ52DUR">Algorithmic Toolbox</a>
+						<em class="resume">Algorithmic Toolbox by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Sunday, June 26, 2016 6:22 AM GMT</em>
+					</p>
+				</div>
+			</div>
+			<!-- End 5th Row -->
 
-            <!-- Begin 5th Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">CERTIFICATES</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Dec. 2016</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/PQWR53D54GKQ">Machine Learning</a>
-                    <em class="resume">Machine Learning by Stanford University on Coursera. Certificate earned at Saturday, December 17, 2016 5:19 AM GMT</em></p>
-                </div>
-                <div class="col-4"> <h3 class="resume">July 2016</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/KPBUS7F5V2LX">Data Structure</a>
-                    <em class="resume">Data Structures by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Wednesday, July 13, 2016 8:53 AM GMT</em></p>
-                </div>
-                <div class="col-4"> <h3 class="resume">June 2016</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="https://www.coursera.org/account/accomplishments/verify/D73TDVQ52DUR">Algorithmic Toolbox</a>
-                    <em class="resume">Algorithmic Toolbox by University of California, San Diego & National Research University Higher School of Economics on Coursera. Certificate earned at Sunday, June 26, 2016 6:22 AM GMT</em></p>
-                </div>
-            </div>
-            <!-- End 5th Row -->
-
-            <!-- Begin 6th Row -->
-            <div class="row">
-                <div class="col-4"> <h2 class="resume">PUBLISHED WORK</h2> </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">Nov. 2014</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="http://ntur.lib.ntu.edu.tw/handle/246246/261894">FDTD simulation analysis of the CPML optical target</a>
-                    <ul class="info">
-                        <li class="resume">analyze the absorption of a convolutional perfectly matched layer (CPML) optical target under the condition of different resolutions, and different frequencies Gaussian beam source in the Finite-Difference Time-Domain (FDTD) simulations</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4"> <h3 class="resume">July 2014</h3> </div>
-                <div class="col-8">
-                    <p class="resume"><a class="resume" href="https://eds.b.ebscohost.com/abstract?site=eds&scope=site&jrnl=15599450&AN=98478816&h=KaUWEsCu%2b%2fmr7tnj6qhff66pu%2baRjxvVH6GmrpPJF2ngM5b9gzxBEtKlZLRHLNcUPnWtJIv%2fKP7W3ECoJdYVoA%3d%3d&crl=c&resultLocal=ErrCrlNoResults&resultNs=Ehost&crlhashurl=login.aspx%3fdirect%3dtrue%26profile%3dehost%26scope%3dsite%26authtype%3dcrawler%26jrnl%3d15599450%26AN%3d98478816">Cantero, S., Lee, S.H., and Tseng, S.H. (2014) Shaping the CPML Absorbing Boundary Condition to Eliminate Impingping Light at a Specific Position inside Electromagnetic Simulations. <em>PIERS Proceedings, Aug2014, </em> <b>p2445-2449. 5p.</b></a>
-                    <ul class="info">
-                        <li class="resume">Explored the possibility of implementing an optical target</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End 6th Row -->
-
-        </div>
-    </div>
+			<!-- Begin 6th Row -->
+			<div class="row">
+				<div class="col-4">
+					<h2 class="resume">PUBLISHED WORK</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">Nov. 2014</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="http://ntur.lib.ntu.edu.tw/handle/246246/261894">FDTD simulation analysis of the CPML optical target</a>
+					<ul class="info">
+						<li class="resume">analyze the absorption of a convolutional perfectly matched layer (CPML) optical target under the condition of different resolutions, and different frequencies Gaussian beam source in the Finite-Difference Time-Domain (FDTD) simulations</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<h3 class="resume">July 2014</h3>
+				</div>
+				<div class="col-8">
+					<p class="resume"><a class="resume" href="https://eds.b.ebscohost.com/abstract?site=eds&scope=site&jrnl=15599450&AN=98478816&h=KaUWEsCu%2b%2fmr7tnj6qhff66pu%2baRjxvVH6GmrpPJF2ngM5b9gzxBEtKlZLRHLNcUPnWtJIv%2fKP7W3ECoJdYVoA%3d%3d&crl=c&resultLocal=ErrCrlNoResults&resultNs=Ehost&crlhashurl=login.aspx%3fdirect%3dtrue%26profile%3dehost%26scope%3dsite%26authtype%3dcrawler%26jrnl%3d15599450%26AN%3d98478816">Cantero, S., Lee, S.H., and Tseng, S.H. (2014) Shaping the CPML Absorbing Boundary Condition to Eliminate Impingping Light at a Specific Position inside Electromagnetic Simulations. <em>PIERS Proceedings, Aug2014, </em> <b>p2445-2449. 5p.</b></a>
+					<ul class="info">
+						<li class="resume">Explored the possibility of implementing an optical target</li>
+					</ul>
+				</div>
+			</div>
+			<!-- End 6th Row -->
+		</div>
+	</div>
 </div>
 {% endblock %}
 
