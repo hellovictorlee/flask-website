@@ -2,253 +2,231 @@
 {% block title %}Playground{% endblock %}
 
 {% block head %}
-    <style>
-        #mapcontainer {
-            display: inline-block;
-            margin: 0 auto; 
-            background: white; 
-            position: relative; 
-            border: 10px solid grey; 
-            border-radius: 10px; 
-            line-height: 0;
-        }
+	<style>
+		#mapcontainer {
+			display: inline-block;
+			margin: 0 auto;
+			background: white;
+			position: relative;
+			border: 10px solid grey;
+			border-radius: 10px;
+			line-height: 0;
+		}
 
-        #mapcanvas { position:relative; z-index:20; }
-    </style>
+		#mapcanvas { position:relative; z-index:20; }
+	</style>
 {% endblock %}
 
 {% block content %}
 <div id="map" class="container" style="text-align: center;">
-    <h2 class="post-title" style="text-align: center;"> Road Trip </h2>
-    <div class="row">
-        <div class="mx-auto">
-            <div id="mapcontainer">
-                <img id="mapimg" style="position:absolute; z-index:1; max-width:100%;" src={{ url_for('static', filename="img/usamap.gif") }} >
-                <canvas id="mapcanvas"></canvas>
-            </div>
-        </div>
-    </div>
+	<h2 class="post-title" style="text-align: center;"> Road Trip </h2>
+	<div class="row">
+		<div class="mx-auto">
+			<div id="mapcontainer">
+				<img id="mapimg" style="position:absolute; z-index:1; max-width:100%;" src={{ url_for('static', filename="img/usamap.gif") }} >
+				<canvas id="mapcanvas"></canvas>
+			</div>
+		</div>
+	</div>
 </div>
 <div>
-    <p class="post-subtitle">
-        Control:<br>K, → : increase date<br>J, ← : decrease date
-    </p>
+	<p class="post-subtitle">Control:<br>K, → : increase date<br>J, ← : decrease date</p>
 </div>
 
 <div id="trip" class="container">
-    <div id="day1" class="post-preview">
-        <h2 class="post-tile">June 9</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">Seven Magic Mountain</p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day1" class="post-preview">
+		<h2 class="post-tile">June 9</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">Seven Magic Mountain</p>
+		</div>
+	</div>
 
-    <div id="day2" class="post-preview">
-        <h2 class="post-tile">June 10 - 11</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">Oatman</p>
-            <p>Oatman is a town in the Black Mountains of Mohave County, Arizona, United States.</p>
-            <p class="post-subtitle" style="font-weight: bold;">Flintstones Bedrock City</p>
-            <p>Inspired by the Flintstones, this prehistoric-style destination features a diner, shop & campground.</p>
-            <p class="post-subtitle" style="font-weight: bold;">Antelope Canyon</p>
-            <p>Antelope Canyon is a slot canyon in the American Southwest. It is on Navajo land east of Page, Arizona.</p>
-        </div>
-    </div>
+	<div id="day2" class="post-preview">
+		<h2 class="post-tile">June 10 - 11</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">Oatman</p>
+			<p>Oatman is a town in the Black Mountains of Mohave County, Arizona, United States.</p>
+			<p class="post-subtitle" style="font-weight: bold;">Flintstones Bedrock City</p>
+			<p>Inspired by the Flintstones, this prehistoric-style destination features a diner, shop & campground.</p>
+			<p class="post-subtitle" style="font-weight: bold;">Antelope Canyon</p>
+			<p>Antelope Canyon is a slot canyon in the American Southwest. It is on Navajo land east of Page, Arizona.</p>
+		</div>
+	</div>
 
-    <div id="day3" class="post-preview">
-        <h2 class="post-tile">June 12</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">Horseshoe Bend</p>
-            <p></p>
-            <p class="post-subtitle" style="font-weight: bold;">Isleta Resort & Casino</p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day3" class="post-preview">
+		<h2 class="post-tile">June 12</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">Horseshoe Bend</p>
+			<p class="post-subtitle" style="font-weight: bold;">Isleta Resort & Casino</p>
+		</div>
+	</div>
 
-    <div id="day4" class="post-preview">
-        <h2 class="post-tile">June 13</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">Cadillac Ranch</p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day4" class="post-preview">
+		<h2 class="post-tile">June 13</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">Cadillac Ranch</p>
+		</div>
+	</div>
 
-    <div id="day5" class="post-preview">
-        <h2 class="post-tile">June 14</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">Fort Worth Water Gardens</p>
-            <p></p>
-            <p class="post-subtitle" style="font-weight: bold;">Fort Worth Stockyards</p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day5" class="post-preview">
+		<h2 class="post-tile">June 14</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">Fort Worth Water Gardens</p>
+			<p class="post-subtitle" style="font-weight: bold;">Fort Worth Stockyards</p>
+		</div>
+	</div>
 
-    <div id="day6" class="post-preview">
-        <h2 class="post-tile">June 15</h2>
-        <div>
-        </div>
-    </div>
+	<div id="day6" class="post-preview">
+		<h2 class="post-tile">June 15</h2>
+		<div></div>
+	</div>
 
-    <div id="day7" class="post-preview">
-        <h2 class="post-tile">June 16 - 17</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;">St. Louis</p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day7" class="post-preview">
+		<h2 class="post-tile">June 16 - 17</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;">St. Louis</p>
+		</div>
+	</div>
 
-    <div id="day8" class="post-preview">
-        <h2 class="post-tile">June 18 - 20</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day8" class="post-preview">
+		<h2 class="post-tile">June 18 - 20</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day9" class="post-preview">
-        <h2 class="post-tile">June 21</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day9" class="post-preview">
+		<h2 class="post-tile">June 21</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day10" class="post-preview">
-        <h2 class="post-tile">July 7</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day10" class="post-preview">
+		<h2 class="post-tile">July 7</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day11" class="post-preview">
-        <h2 class="post-tile">July 8</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day11" class="post-preview">
+		<h2 class="post-tile">July 8</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day12" class="post-preview">
-        <h2 class="post-tile">July 9</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day12" class="post-preview">
+		<h2 class="post-tile">July 9</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day13" class="post-preview">
-        <h2 class="post-tile">July 10</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day13" class="post-preview">
+		<h2 class="post-tile">July 10</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day14" class="post-preview">
-        <h2 class="post-tile">July 11</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day14" class="post-preview">
+		<h2 class="post-tile">July 11</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day15" class="post-preview">
-        <h2 class="post-tile">July 12</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day15" class="post-preview">
+		<h2 class="post-tile">July 12</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day16" class="post-preview">
-        <h2 class="post-tile">July 13</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day16" class="post-preview">
+		<h2 class="post-tile">July 13</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 
-    <div id="day17" class="post-preview">
-        <h2 class="post-tile">July 14</h2>
-        <div>
-            <p class="post-subtitle" style="font-weight: bold;"></p>
-            <p></p>
-        </div>
-    </div>
+	<div id="day17" class="post-preview">
+		<h2 class="post-tile">July 14</h2>
+		<div>
+			<p class="post-subtitle" style="font-weight: bold;"></p>
+		</div>
+	</div>
 </div>
 <hr>
 
 
 <div class="container">
-    <div class="row">
-        <div class="mx-auto">
+	<div class="row">
+		<div class="mx-auto">
+			<div class="post-preview">
+				<a href="https://shuaihsunlee.github.io/catchasesmouse/catchasesmouse.html">
+					<h2 class="post-title"> Cat chases Mouse </h2>
+					<p class="post-subtitle">
+					All you need to do is moving your mouse.<br><br>
+					Control:<br>
+					C : Increase Arrow Number<br>
+					X : Decrease Arrow Number
+					</p>
+					<p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on April 12, 2018 </p>
+				</a>
+			</div>
+			<hr>
 
-            <div class="post-preview">
-                <a href="https://shuaihsunlee.github.io/catchasesmouse/catchasesmouse.html">
-                    <h2 class="post-title"> Cat chases Mouse </h2>
-                </a>
-                <p class="post-subtitle">
-                    All you need to do is moving your mouse.<br>
-                    <br>
-                    Control:<br>C : Increase Arrow Number<br>X : Decrease Arrow Number
-                </p>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a> on April 12, 2018 </p>
-            </div>
-            <hr>
+			<div class="post-preview">
+				<a href="https://shuaihsunlee.github.io/WAVingS/WAVingS.html">
+					<h2 class="post-title"> WAVingS </h2>
+					<p class="post-subtitle">
+					This is a game that you have to avoid falling down on the ocean.<br>
+					The more distance you walk through, the more score you get.<br>
+					Beware: the game will get harder and harder!!!<br><br>
+					Control:<br>
+					W, K, ↑ : moving up<br>
+					S, J, ↓ : moving down<br>
+					A, H, ← : moving left<br>
+					D, L, → : moving right
+					</p>
+				</a>
+				<p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a href="https://github.com/Aoi-K">Aoi</a>, <a href="https://github.com/GuanYangCLU">Guan</a>, & <a href="https://github.com/s777610">WEI-CHENG HUNG</a> on March 18, 2018
+				</p>
+			</div>
+			<hr>
 
-            <div class="post-preview">
-                <a href="https://shuaihsunlee.github.io/WAVingS/WAVingS.html">
-                    <h2 class="post-title"> WAVingS </h2>
-                    <p class="post-subtitle">
-                        This is a game that you have to avoid falling down on the ocean.<br>
-                        The more distance you walk through, the more score you get.<br>
-                        Beware: the game will get harder and harder!!!<br>
-                        <br>
-                        Control:<br>W, K, ↑ : moving up<br>S, J, ↓ : moving down<br>A, H, ← : moving left<br>D, L, → : moving right
-                    </p>
-                </a>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a href="https://github.com/Aoi-K">Aoi</a>, <a href="https://github.com/GuanYangCLU">Guan</a>, & <a href="https://github.com/s777610">WEI-CHENG HUNG</a> on March 18, 2018 </p>
-            </div>
-            <hr>
+			<div class="post-preview">
+				<a href="https://firstglory.github.io/40/hi">
+					<h2 class="post-title"> Friendly Dungeon </h2>
+					<p class="post-subtitle">
+					You woke up and found yourself locked in a dungeon.<br>
+					There are coins around you, but picking them up slows you down.<br>
+					You can also trade coins for keys, which open doors.<br>
+					Beware: the dungeon can turn wild.<br><br>
+					Control:<br>W, ↑ : moving up<br>S, ↓ : moving down<br>A, ← : moving left<br>D, → : moving right
+					</p>
+					<p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, & <a> Dawn</a> on December 5, 2017 </p>
+				</a>
+			</div>
+			<hr>
 
-            <div class="post-preview">
-                <a href="https://firstglory.github.io/40/hi">
-                    <h2 class="post-title"> Friendly Dungeon </h2>
-                </a>
-                <p class="post-subtitle">
-                    You woke up and found yourself locked in a dungeon.<br>
-                    There are coins around you, but picking them up slows you down.<br>
-                    You can also trade coins for keys, which open doors.<br>
-                    Beware: the dungeon can turn wild.<br>
-                    <br>
-                    Control:<br>W, ↑ : moving up<br>S, ↓ : moving down<br>A, ← : moving left<br>D, → : moving right
-                </p>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, & <a> Dawn</a> on December 5, 2017 </p>
-            </div>
-            <hr>
-
-            <div class="post-preview">
-                <a href="https://firstglory.github.io/home.html">
-                    <h2 class="post-title"> Across the Ancient </h2>
-                </a>
-                <p class="post-subtitle">
-                    You accidentally went to a small desert island.<br>
-                    You have to find a way to escape the island.<br>
-                    Finally, you will find the island is not just a desert island you thought before.<br>
-                    <br>
-                    Control:<br>↑ : moving up<br>↓ : moving down<br>← : moving left<br>→ : moving right<br>Q : changing to left tool<br>E: changing to right tool
-                </p>
-                <p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a>Dawn</a>, & <a>Pei</a> on April 24, 2017 </p>
-            </div>
-
-            <!-- Pager -->
-            <!-- <div class="clearfix"> -->
-            <!--     <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
-            <!-- </div> -->
-        </div>
-    </div>
+			<div class="post-preview">
+				<a href="https://firstglory.github.io/home.html">
+					<h2 class="post-title"> Across the Ancient </h2>
+					<p class="post-subtitle">
+					You accidentally went to a small desert island.<br>
+					You have to find a way to escape the island.<br>
+					Finally, you will find the island is not just a desert island you thought before.<br>
+					<br>
+					Control:<br>↑ : moving up<br>↓ : moving down<br>← : moving left<br>→ : moving right<br>Q : changing to left tool<br>E: changing to right tool
+					</p>
+					<p class="post-meta"> Posted by <a href="https://www.linkedin.com/in/shuaihsunlee">Victor Lee</a>, <a>Dawn</a>, & <a>Pei</a> on April 24, 2017 </p>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src={{ url_for('static', filename="js/path_point.js") }} ></script>
