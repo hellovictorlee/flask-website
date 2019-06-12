@@ -1,6 +1,7 @@
 __pycache__/
 *.db
 flask_session
+venv/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
